@@ -9,6 +9,7 @@
 - COCO (Common Objects in COntext) Dataset has 80 different type of object, it comes in various sizes
 - CIFAR-10 / 100 (Canadian Institute For Advanced Research) contain 60k images accross 10 / 100 categories
 - DOTA (Dataset for Object deTection in Aerial Images) has 15 Categories
+- fashionMNIST
 
 # What is yaml ?
 YAML is to create configuration files. It's recommended that configuration files be written in YAML rather than JSON, even though they can be used interchangeably in most cases, because YAML has better readability (like Python Syntax, white space) and is more user-friendly.  
