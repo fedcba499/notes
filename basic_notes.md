@@ -83,37 +83,76 @@ author: omkarbirade
 published: true
 ```
 
-what is epoches ?
-In machine learning, an epoch refers to one complete pass through the entire training dataset where every data sample is passed through the model and its parameters are updated based on the calculated error. The training process requires multiple epochs, allowing the model to improve iteratively by adjusting its parameters based on the calculated error.
+## What is Epoches ?
+In machine learning, an epoch refers to one complete pass through the entire training dataset where every data sample is passed through the model and its parameters are updated based on the calculated error. 
 
-what are weights?
-Purpose: During forward propagation, inputs are multiplied by their respective weights before being passed through an activation function. This influences how strongly each input contributes to the final output. Like, we did in course grading prediction model, where each parameter like (married or unmarried, trade, state etc ) each column or parameter to be multiplied with certain weight based on its influence on final outcome.
-Learning Mechanism: During training, weights are updated iteratively through optimization algorithms like gradient descent to minimize the difference between predicted and actual outcomes.
-Generalization: Properly tuned weights allow the network to generalize beyond training data making accurate predictions on new, unseen inputs.
+The training process requires multiple epochs, allowing the model to improve iteratively by adjusting its parameters based on the calculated error.
 
-Best Practises of Python
-Requirements File : It is good method to use requirements file to use for listing dependency library. In future if we want to rerun program we can uses same set of library which were functional.
+## What are Weights?
+**Purpose:** During forward propagation, inputs are multiplied by their respective weights before being passed through an activation function. This influences how strongly each input contributes to the final output. 
+> Like, we did in course grading prediction model, where each parameter like (married or unmarried, trade, state etc ) each column or parameter to be multiplied with certain weight based on its influence on final outcome.
 
-Virtual Environment - It is good practise to create separate Virtual environment for each project so that has its own dependent library in separate  folder can be added to gitignore.
+Imagine you're trying to decide whether to go outside based on different factors:
+### Your Inputs (Information):
+- Temperature: 75°F
+- Chance of rain: 20%
+- Wind speed: 5 mph
 
-Version Control - To test and add to Main Brach.
+### But Not All Factors Matter Equally
+Some factors are more important to you than others. In neural networks, we call this importance "weights."
 
-IPython (short for Interactive Python) is an enhanced interactive Python shell designed for interactive computing and exploratory data analysis.
+### Your Personal Weights (How Much You Care):
+- Temperature importance: Very high (weight = 0.8)
+- Rain chance importance: Medium (weight = 0.5)
+- Wind speed importance: Low (weight = 0.2)
 
-Before training on custom data yonov11n.pt is of size 5.35 mb, after training on aadhar data set size it still the same. Why?
-yolov11n.pt - Pretrained weights — default weights trained on COCO or another base dataset.
-best.pt - Your trained weights — same architecture, but learned parameters updated based on your dataset.
+### The Multiplication Step
+Now we multiply each input by how much it matters to you:
+- Temperature influence = 75 × 0.8 = 60
+- Rain influence = 20 × 0.5 = 10
+- Wind influence = 5 × 0.2 = 1
 
-Why Size Is Similar
+Total influence = 60 + 10 + 1 = 71
+
+## The Activation Function (Decision Making)
+The activation function is like your brain's final decision-making step. It takes that total influence (71) and decides:
+
+- If the number is high enough → "Yes, go outside!"
+- If it's too low → "No, stay inside"
+
+Think of it as your personal threshold. Maybe you go outside if the total is above 50, stay inside if below.
+
+### Learning Mechanism
+During training, weights are updated iteratively through optimization algorithms like gradient descent to minimize the difference between predicted and actual outcomes.
+
+
+## Best Practises of Python
+### Requirements File 
+It is good method to use requirements file to use for listing dependency library. In future if we want to rerun program we can uses same set of library which were functional.
+
+### Virtual Environment 
+It is good practise to create separate Virtual environment for each project so that has its own dependent library in separate  folder can be added to gitignore.
+
+### Version Control 
+To test and add to Main Brach.
+
+## What is IPython?
+IPython stands for Interactive Python is an enhanced interactive Python shell designed for interactive computing and exploratory data analysis.
+
+## Before training custom data on yonov11n.pt, model size is 5.35 mb, after training on aadhar data set size it still the same. Why?
+- yolov11n.pt - Pretrained weights — default weights trained on COCO or another base dataset.
+- best.pt - Your trained weights — same architecture, but learned parameters updated based on your dataset.
+
 YOLOv11n (nano) has a fixed architecture with ~2.58 million parameters.
 So, both files store weights for the same number of layers and tensors.
 Only the values of those parameters (weights, biases, batch norms) are different.
 This is why both files are ~5.3 MB, but they encode different model behavior.
 
-Think of it like saving two versions of the same Excel sheet — same format, different data.
+> Think of it like saving two versions of the same Excel sheet — same format, different data.
 
 In Aadhar card, licence plate and helmet we are using object detection model.
-Yolo can do Object Detection, Instance Segmentation, pose/ keypoints, oriented detection and classification.
+
+```python
 
 !yolo task=detect mode=train \
   data={dataset.location}/data.yaml \
@@ -128,6 +167,7 @@ Yolo can do Object Detection, Instance Segmentation, pose/ keypoints, oriented d
   project="improved_detection" \
   name="better_model_v1" \
   plots=True (Visual progress )
+```
 
 🏗️ Basic Building Blocks
 1. Model
