@@ -29,8 +29,10 @@ This is why both files are ~5.3 MB, but they encode different model behavior.
 
 > Think of it like saving two versions of the same Excel sheet — same format, different data.
 
-In Aadhar card, licence plate and helmet we are using object detection model.
+> In Aadhar card, licence plate and helmet we are using object detection model.
 
+## Parameter of YOLO Models
+ 
 ```python
 
 !yolo task=detect mode=train \
