@@ -46,30 +46,8 @@ The training process requires multiple epochs, allowing the model to improve ite
 **Purpose:** During forward propagation, inputs are multiplied by their respective weights before being passed through an activation function. This influences how strongly each input contributes to the final output. 
 > Like, we did in course grading prediction model, where each parameter like (married or unmarried, trade, state etc ) each column or parameter to be multiplied with certain weight based on its influence on final outcome.
 
-Imagine you're trying to decide whether to go outside based on different factors:
-### Your Inputs (Information):
-- Temperature: 75°F
-- Chance of rain: 20%
-- Wind speed: 5 mph
-
-### But Not All Factors Matter Equally
-Some factors are more important to you than others. In neural networks, we call this importance "weights."
-
-### Your Personal Weights (How Much You Care):
-- Temperature importance: Very high (weight = 0.8)
-- Rain chance importance: Medium (weight = 0.5)
-- Wind speed importance: Low (weight = 0.2)
-
-### The Multiplication Step
-Now we multiply each input by how much it matters to you:
-- Temperature influence = 75 × 0.8 = 60
-- Rain influence = 20 × 0.5 = 10
-- Wind influence = 5 × 0.2 = 1
-
-Total influence = 60 + 10 + 1 = 71
-
 ## The Activation Function (Decision Making)
-The activation function is like your brain's final decision-making step. It takes that total influence (71) and decides:
+The activation function is like your brain's final decision-making step. It takes that total influence and decides:
 
 - If the number is high enough → "Yes, go outside!"
 - If it's too low → "No, stay inside"
