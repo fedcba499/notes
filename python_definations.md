@@ -40,3 +40,8 @@ IPython stands for Interactive Python is an enhanced interactive Python shell de
 ## What is pathlib?
 Pathlib is python library introduced from python 3.4, replacing os.path. It is currently the recommended way to operate and use files and directory in python.
 
+## What is pyenv? How does it differ from venv?
+pyenv is a Python version management tool that lets you easily install, switch between, and manage multiple Python versions on your system.
+
+venv is Python's built-in virtual environment tool that creates isolated environments for managing packages and dependencies.
+
