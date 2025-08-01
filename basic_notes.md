@@ -1,24 +1,53 @@
-#What is decorator?
+## What is decorator?
 Decorate mean to enhance the appearance of something by adding something unessential.
-    Painting building
-    Adding lights, screens etc to event
+- Painting building
+- Adding lights, screens etc to event
 
-Decorator in Python implies - a function that takes another function as an argument and returns a new function with enhanced functionality.
+> Decorator in Python implies - a function that takes another function as an argument and returns a new function with enhanced functionality.
 
-What is requirement of VIrtual Environments?
-The more Python projects you have, the more likely it is that you need to work with different versions of Python libraries, or even Python itself. Newer versions of libraries for one project can break compatibility in another project.
-Virtual environments are independent groups of Python libraries, one for each project. Packages installed for one project will not affect other projects or the operating system’s packages.
+## What is requirement of VIrtual Environments?
+The more Python projects you have, the more likely it is that you need to work with different versions of Python libraries, or even different version of Python itself. Newer versions of libraries for one project can break compatibility in another project.
 
-Streamlit - For Single Page Web Apps ( Interactive)
+Virtual environments are used to create independent groups of Python libraries, one for each project. Packages installed for one project will not affect other projects or the operating system’s packages.
 
-Automatic Number Plate Recognition (ANPR) 
-License Plate Recognition (LPR) 
+## Web Apps Python Library
 
-OCR - pytesseractOCR
-EasyOCR
-PaddleOCR
+Streamlit | For Single Page Web Apps ( Interactive)
+--- | --- 
+Gradio | Mainly used displaying ML Models
+Flask | Multiple Web Pages, has routing feature 
 
-Ultralytics created YOLO v8 , v11
+## Python Library for OCR
+
+pytesseractOCR | Light | Less Accurate
+--- | --- | ---
+EasyOCR | Medium | Good Accuracy
+PaddleOCR | Heavy | Best Accurarcy
+
+## What is FLOPS (B)
+- Hardware FLOPS stands for Floating-Point Operations Per Seconds.
+- Model FLOPS stand for Floating Point Operations
+- How many billion mathematical operations the model performs for one forward pass (one input image)
+> FLOPs = how much work the model does when you give it 1 image
+
+## What is YOLO?
+- YOLO Stands for You Only Look One.
+- Created for Faster Computer vision Tasks.
+- Ultralytics created YOLO V5, V8 & v11
+- YOLO can handle 5 type of tasks
+    - Detection
+    - Instance Segmentation (seg)
+    - Pose / Keypoints (pose)
+    - Oriented Detection /  Oriented Bounding Box (obb)
+    - Classification (cls)
+- Each Type of tasks of Yolo V11 comes in 5 Varients
+  Model | No of Parameters (M) | Size (MB) | Speed T4 GPU (ms) | FLOPS (B)
+  --- | --- | --- | --- | ---
+  YOLO V11n | 2.6 | 5.35 | 1.5 | 6.5
+  YOLO V11s | 9.4 | 18.4 | 2.5 | 21.5
+  YOLO V11m | 20.1 | 38.8 | 4.7 | 68
+  YOLO V11l | 25.3 | 49 | 6.2 | 86.9
+  YOLO V11x | 56.9 | 109 | 11.3 | 194.9
 
 COCO Data set has 80 different type of object, but not number plate
 COCO128 dataset
