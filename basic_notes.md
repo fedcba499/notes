@@ -150,142 +150,69 @@ This is why both files are ~5.3 MB, but they encode different model behavior.
 
 > Think of it like saving two versions of the same Excel sheet — same format, different data.
 
+## What is Bias?
+Even before anything happens in our day, we might naturally lean toward being happy or grumpy. Thats our "bias" - out starting emotional state. Then daily events (inputs) push us up or down from there.
+
+y = mx + b
+- m = weight (slope)
+- x = input
+- b = bias
+---
+
 In Aadhar card, licence plate and helmet we are using object detection model.
 
 ```python
 
 !yolo task=detect mode=train \
+# Basic Building Blocks
   data={dataset.location}/data.yaml \
   model="yolov11s.pt" \
-  epochs=100 \ ( number of times it should look at data)
-  batch=16 \ ( look 16 images at a time, helps in recognition of pattern, better learining)
-  imgsz=640 \ (set to 640 x 640 px) 
-  val=True \ ( Progress monitoring - Check for validation, check whether model is improving. Like taking practise test while learning)
-  patience=20 \ (Smart stopping - Stop, if no improvement for 20 rounds )
-  device=0 \ (GPU)
-  cache=True \ (Faster training )
+  epochs=100 \ # Number of times it should look at data
+  batch=16 \ # Look 16 images at a time, helps in recognition of pattern, better learining
+  imgsz=640 \ # Set to 640 x 640 px
+  val=True \ # Progress monitoring - Check for validation, check whether model is improving. Like taking practise test while learning
+  patience=15 \ # Smart stopping - Stop, if no improvement for 15 rounds
+  device=0 \ # GPU
+  cache=True \ # Faster training 
   project="improved_detection" \
   name="better_model_v1" \
-  plots=True (Visual progress )
+  plots=True # Visual progress
+
+# Data Augmentation - These are tricks used to make more variations of your images to help the model generalize better.
+
+auto_augment = randaugment # It automatically applies smart image transformations (like rotating, flipping, etc.). Helps model handle real-world variations.
+
+mosaic = 1.0  # Combines 4 training images into one. Helps detect small objects better.
+
+translate = 0.1 # Randomly moves objects by up to 10% of the image size.
+
+scale = 0.5 # Randomly zooms in or out on the object.
+
+fliplr = 0.5 # 50% chance of flipping the image left to right.
+
+erasing = 0.4 # Randomly removes parts of the image to help the model become more robust.
+
+### Learning Parameters
+
+lr0 = 0.01 # Starting learning rate — how fast the model adjusts its guesses.
+
+momentum = 0.937 # Helps smooth the learning over time.
+
+weight_decay = 0.0005 # Keeps the model from memorizing the training data.
+
+warmup_epochs = 3.0 # For the first 3 epochs, the model starts slowly before speeding up learning.
+
 ```
-
-🏗️ Basic Building Blocks
-1. Model
-model = yolov8n.pt
-You are using YOLOv8n, where n stands for nano (small and fast, good for beginners).
-
-.pt is a PyTorch model file. You're starting from a pre-trained model that already knows general shapes.
-
-2. Dataset
-data = /content/Helmet-Detection-2/data.yaml
-This file tells YOLO where your training and validation images are.
-
-It also lists the names of the objects (like “helmet”).
-
-3. Training Duration
-epochs = 100
-One epoch = one full pass through your dataset.
-
-You’ll train for 100 passes to let the model learn better.
-
-4. Image Size
-imgsz = 640
-All images are resized to 640 x 640 pixels before training.
-
-This keeps the training stable and fast.
-
-5. Batch Size
-batch = 16
-16 images are processed at a time.
-
-A bigger batch trains faster but uses more memory.
-
-6. Device
-device = 0
-It means you’re using the first GPU in your system (GPU index 0).
-
-If you were using CPU, this would be device=cpu.
-
-🎨 Data Augmentation
-These are tricks used to make more variations of your images to help the model generalize better.
-
-1. auto_augment = randaugment
-It automatically applies smart image transformations (like rotating, flipping, etc.).
-
-Helps model handle real-world variations.
-
-2. mosaic = 1.0
-Combines 4 training images into one. Helps detect small objects better.
-
-3. translate = 0.1
-Randomly moves objects by up to 10% of the image size.
-
-4. scale = 0.5
-Randomly zooms in or out on the object.
-
-5. fliplr = 0.5
-50% chance of flipping the image left to right.
-
-6. erasing = 0.4
-Randomly removes parts of the image to help the model become more robust.
-
-🧠 Learning Parameters
-These control how the model learns.
-
-1. lr0 = 0.01
-Starting learning rate — how fast the model adjusts its guesses.
-
-2. momentum = 0.937
-Helps smooth the learning over time.
-
-3. weight_decay = 0.0005
-Keeps the model from memorizing the training data.
-
-4. warmup_epochs = 3.0
-For the first 3 epochs, the model starts slowly before speeding up learning.
-
-📂 Saving and Logging
-These control what gets saved and where.
-
-1. project = improved_detection
-2. name = better_model_v1
-Your model and results will be saved under a folder:
-
-improved_detection/better_model_v1/
-3. save = True
-It saves trained models, graphs, etc.
-
-4. save_dir = improved_detection/better_model_v1
-This is the exact folder where your model will be saved.
-
-🧪 Evaluation & Validation
-These settings help you test how good your model is.
-
-1. val = True
-YOLO will evaluate your model on validation images after each epoch.
-
-2. patience = 20
-If the model doesn’t improve after 20 epochs, it stops training early.
-
-⚡ Speed Boost Options
-1. amp = True
-Uses mixed precision training (faster and uses less GPU memory).
-
-2. cache = True
-Loads images into memory to speed up training.
-
-3. workers = 8
-Uses 8 CPU threads to load data in parallel.
-
- What is a Quantized Model?
+## What is a Quantized Model?
 A quantized model is a compressed version of your trained model, where floating point numbers (32-bit) are converted into smaller numbers, like 8-bit integers (int8).
 
-Types of Quantization 
-Dynamic Quantization	Only weights are quantized (int8)	Good, fast, easy
-Static Quantization	Weights + activations are int8	More accurate but complex
-Quantization Aware Training (QAT)	Trained with quantization in mind	Best accuracy, slow to train
+### Types of Quantization 
+- Dynamic Quantization	Only weights are quantized (int8)	Good, fast, easy
+- Static Quantization	Weights + activations are int8	More accurate but complex
+- Quantization Aware Training (QAT)	Trained with quantization in mind	Best accuracy, slow to train
 
 For YOLO, dynamic or static quantization is often used after training.
 
+## What is ONXX
 ONNX stands for Open Neural Network Xchange
  It’s like exporting a Word document as PDF — any device can open it the same way.
