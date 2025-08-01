@@ -36,3 +36,7 @@ To test and add to Main Brach.
 
 ## What is IPython?
 IPython stands for Interactive Python is an enhanced interactive Python shell designed for interactive computing and exploratory data analysis.
+
+## What is pathlib?
+Pathlib is python library introduced from python 3.4, replacing os.path. It is currently the recommended way to operate and use files and directory in python.
+
