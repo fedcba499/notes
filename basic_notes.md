@@ -41,6 +41,7 @@ PaddleOCR | Heavy | Best Accurarcy
     - Oriented Detection /  Oriented Bounding Box (obb)
     - Classification (cls)
 - Each Type of tasks of Yolo V11 comes in 5 Varients
+  
   Model | No of Parameters (M) | Size (MB) | Speed T4 GPU (ms) | FLOPS (B)
   --- | --- | --- | --- | ---
   YOLO V11n | 2.6 | 5.35 | 1.5 | 6.5
@@ -49,13 +50,17 @@ PaddleOCR | Heavy | Best Accurarcy
   YOLO V11l | 25.3 | 49 | 6.2 | 86.9
   YOLO V11x | 56.9 | 109 | 11.3 | 194.9
 
-COCO Data set has 80 different type of object, but not number plate
-COCO128 dataset
+## Public Datasets
+- ImageNet Dataset has 14 million images accross 20k Categories
+- COCO (Common Objects in COntext) Dataset has 80 different type of object, it comes in various sizes
+- CIFAR-10 / 100 (Canadian Institute For Advanced Research) contain 60k images accross 10 / 100 categories
+- DOTA (Dataset for Object deTection in Aerial Images) has 15 Categories
 
-what is yaml ?
+# What is yaml ?
 YAML is to create configuration files. It's recommended that configuration files be written in YAML rather than JSON, even though they can be used interchangeably in most cases, because YAML has better readability (like Python Syntax, white space) and is more user-friendly.  
 
----
+
+```yaml
 # A sample yaml file
 company: spacelift
 domain:
@@ -76,6 +81,7 @@ tutorial:
       born: 1996
 author: omkarbirade
 published: true
+```
 
 what is epoches ?
 In machine learning, an epoch refers to one complete pass through the entire training dataset where every data sample is passed through the model and its parameters are updated based on the calculated error. The training process requires multiple epochs, allowing the model to improve iteratively by adjusting its parameters based on the calculated error.
