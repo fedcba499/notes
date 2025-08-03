@@ -75,3 +75,58 @@ weight_decay = 0.0005 # Keeps the model from memorizing the training data.
 warmup_epochs = 3.0 # For the first 3 epochs, the model starts slowly before speeding up learning.
 
 ```
+
+## What is Ultralytics Package?
+
+### Tasks
+- Image Classify (classify)
+- Object Detection (detect)
+- Image Segmentation (segment)
+- Pose Estimation (pose)
+- Oriented Bounding Box (obb)
+
+
+### Modes
+- Model Validation (val)
+- Model Tain (train)
+- Model Export (export)
+- Benchmark (benchmark)
+- Object Tracking (track)
+- Inference (predict)
+
+### Ultralytics Solutions
+
+```python
+
+from ultralytics import YOLO
+
+# Load the model
+# Argument - path of model
+# Lets store intitalization of model in variable named model, so that futher operations can be carried on model variable. In this way we can use it for multiple purposes.
+model = YOLO("yolo11n.pt")
+
+# Use different modes
+# when we want to see results on image
+# argument in predict method show = True
+# because it is image it automatically closes
+# so we are saving the image
+# with save = True
+results = model.predict(source="image.png", save = True)
+
+# Extract the results
+for result in results:
+  print(result.boxes.xyxy)
+  # when we are using segmentation model
+  print(result.masks.xy)
+  # pose model
+  print(result.keypoints)
+
+```
+
+We will be using Label Studio for annotation
+
+```console
+pip install label-studio
+label-studio start
+```
+
