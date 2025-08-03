@@ -79,3 +79,22 @@ For YOLO, dynamic or static quantization is often used after training.
 ## What is ONXX
 ONNX stands for Open Neural Network Xchange
  It’s like exporting a Word document as PDF — any device can open it the same way.
+
+## What Are Visual Question Answering (VQA) Models?
+Visual Question Answering (VQA) Models takes image and text (prompt) as input, and outputs text based answer.
+
+> What is the color of car in image?
+> Is person on bike wearing helmet?
+
+It is multi model arcitecture. 
+CNN / Tranformer models for image detection.
+LLM models for text generation.
+It combines both of them and produce results.
+
+- Gemma 3n
+- PaliGemma
+- LLaVA
+- CogVLM
+- InstructBLIP
+- DonutBase
+- BLIP-2
