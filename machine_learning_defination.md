@@ -7,9 +7,16 @@
 ## Public Datasets
 - ImageNet Dataset has 14 million images accross 20k Categories
 - COCO (Common Objects in COntext) Dataset has 80 different type of object, it comes in various sizes
-- CIFAR-10 / 100 (Canadian Institute For Advanced Research) contain 60k images accross 10 / 100 categories
+- CIFAR-10 / 100 (Canadian Institute For Advanced Research) contain 60k images accross 10 / 100 categories of 32 x 32 Pixels.
 - DOTA (Dataset for Object deTection in Aerial Images) has 15 Categories
 - fashionMNIST
+
+## What is TorchVision?
+TorchVision is a component of PyTorch, which provides pre-trained models, datasets and utility functions to simplify the development process.
+- **Pre-trained Models** : ResNet, VGG, Inception etc
+- **Datasets** : CIFAR-10. CIFAR-100, COCO, MNIST etc
+- **Data Tranformtion** : Image Resizing, Cropping, Rotation, Normalization, Enhancing the Quality etc
+- **Object Detect and Segmentation** : Faster R-CNN, Mask R-CNN models etc
 
 # What is yaml ?
 YAML is to create configuration files. It's recommended that configuration files be written in YAML rather than JSON, even though they can be used interchangeably in most cases, because YAML has better readability (like Python Syntax, white space) and is more user-friendly.  
@@ -98,3 +105,39 @@ It combines both of them and produce results.
 - InstructBLIP
 - DonutBase
 - BLIP-2
+
+
+ReLU - Rectified Linear Unit
+Back Propagation to improve accuracy to self learn
+Neurons
+    input layer
+    hidden layer ( apply formula to input in each layer )
+    output layer
+
+torchvision is python package consists of popular datasets
+Transformers is type of nueral network deals with sequential data. (Like Text, Voice etc) process data in Parallel (faster)
+    Self Attention Mechanism ( If you are in busy room, trying to listen to voice )
+    This method pays more attention to relevant information, and gets meaningful output
+   Think about how you understand this sentence: "The trophy wouldn't fit in the suitcase because it was too big." What does "it" refer to — the trophy or the suitcase? For humans, context makes it clear that "it" refers to the trophy. Transformers can make these connections too, thanks to their attention mechanism.
+ 
+types of neural network - Transformers, RNN (Recurrent Neural Network), CNN ( Convolutional Neural Network)
+GPT is type of Transformer (Generative Pretrained Transformer)
+
+Positional Encoding - Position of word in sentence
+    Since the Transformer processes all tokens (words) simultaneously, it needs a way to understand their order. This is where positional encoding comes in — additional information added to each embedding that indicates its position in the sequence. Without positional encoding, the sentence "dog bites man" would be indistinguishable from "man bites dog".
+
+Multi Head Attention 
+    Think of multi-head attention like having several people read the same text, each focusing on different aspects:
+     One person might focus on syntactic relationships
+     Another might capture semantic similarities 
+     A third might identify subject-object relationships.
+
+Encoder - Decoder
+
+Softmax Activation Function in Neural Networks
+Q.    What is Activation Function in Neural Networks
+
+Embedding - Words to Vectors ( Numbers)
+Static Embeddings - GloVe (Global Vector) Word2Vec are certain Techniques
+Contextual Embeddings
+       

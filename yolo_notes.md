@@ -130,3 +130,11 @@ pip install label-studio
 label-studio start
 ```
 
+auto_annotate
+
+sam model - segment anything model
+
+auto_annotate takes 3 arguments, path to data, detection model, sam model
+
+It is difficult to annotate segmentation data, because we need to create polygon on every object, if we want to segment apple, how accurate can we be, it will be very diffiult, so we make detection labels using label studio, we then pass detection model and auto_annotate model from segment anything model, which creates polygon around each detected object. By this we can easily create segment labels.
+
