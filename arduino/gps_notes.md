@@ -28,7 +28,7 @@ CORS stands for Continously Operating Reference Station. Surevey of India operat
 - Carrier Phase Measurement. Very Accurate. Used in Real Time Kinematics and Post Processing Kinematics.
 - Pseudo Random Code. Low Cost GPS
 
-![Carrier Wave Measurement vs Pseudo Random Code](./assets/images/gps_wave.png)
+![Carrier Wave Measurement vs Pseudo Random Code](blob:https://github.com/2712701f-4de5-4dec-a587-d1cec9472cd9)
 
 Full carrier phase tracking. For accuracy timimg
 Pusedo range Tracking 
