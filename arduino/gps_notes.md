@@ -29,6 +29,7 @@ CORS stands for Continously Operating Reference Station. Surevey of India operat
 - Pseudo Random Code. Low Cost GPS
 
 ![Carrier Wave Measurement vs Pseudo Random Code](../assets/images/gps_wave.png)
+*Carrier Wave Measurement vs Pseudo Random Code*
 
 Full carrier phase tracking. For accuracy timimg
 Pusedo range Tracking 
