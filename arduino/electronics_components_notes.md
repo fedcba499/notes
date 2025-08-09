@@ -27,11 +27,6 @@ AWG stands for American Wire Guage. For general purpose connection AWG22 is good
 ## Castellated Edges
 Catellated Edges are plated through holes on a PCB which are cut in half. Typically, these are applied to the outer edges of a board, and are used to solder one board on top of another.
 
-## ESP32 Cam
-ESP32 Cam Module has inbuilt SD Card reader.(Thus removing complexity of 6 Wire). TP 4056 power supply module to provide stable 5v power supply to esp32-cam module. switch on +ve wire from 4056 to esp32 cam. (Serial Peripheral Interface) SPI Communication protocal for communication with sd card.
-> The U2RXD pin on the ESP32 refers to UART2 Receive Data (RX), which is a pin designated for receiving data via the UART (Universal Asynchronous Receiver-Transmitter) protocol.
-> Remove SD Card while uploading code to esp32 cam
- 
 ## What is Serial Monitor?
 Serial Monitor can be used as a debugging tool, testing out concepts or to communicate directly with the Arduino board.
 > Using print tool to test where does code getting stuck.
@@ -62,4 +57,5 @@ Software serial uses bit-banging to emulate serial communication in software on 
 - Cirkit Designer studio for bread board
 - Monochrome lcd for ruggedness 2.4 inch
 - Use internal pullup resistor to avoid adding resistor to button
+
 
