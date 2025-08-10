@@ -7,6 +7,7 @@ ESP32 Module
 SD Card
 Correction data
 patch antenna 
+Integrated antenna
 
 ## Correction Data Chip
 Neo-D9S

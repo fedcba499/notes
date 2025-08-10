@@ -8,6 +8,19 @@
 - Elecrow
 - Seeed Studio
 
+## Websites to Buy Electronics Components
+- robu.in
+- rees52
+- techiesms.com
+- robokit.com
+- sharvielectronics.com
+- lioncircuits.com
+- tanotis.com
+- techdelivers.com
+
+
+
+
 ## What is difference between Arduino Boards and ESP32 Boards?
 - Esp 32 - 32 bit processor (good for projects which requires high computation power, power management issues)
 - Arduino - 8 bit processor (good for small projects, quick power settings with 9v battery, low computation power)
