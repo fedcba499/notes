@@ -19,3 +19,19 @@ Right click on main.py, upload to MicroPython Device. It copies main.py to ESP32
 
 ## Running Code
 Micropython run two special files automatically. boot.py and main.py
+
+## Key Standard Library of MicroPython
+| Classes | Usage |
+| --- | --- |
+| Pin | Control Digital GPIO Pins |
+| PWN | Pulse width Modulation (LED dimming, motor speed) |
+| ADC | Analog Input (Read Sensor Voltages) |
+| DAC | Analog Output (Limited support on ESP32) |
+| I2C | Communicate with I2C devices (sensors, OLEDs etc) |
+| SPI | Communicate with SPI devices (displays, SD Cards) |
+| UART | Serial Communication (GPS, GSM Modules) |
+| Timer | Schedule repeated tasks |
+| RTC | Real Time Clock (Time Keeping) |
+
+
+
