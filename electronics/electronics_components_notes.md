@@ -67,13 +67,28 @@ Software serial uses bit-banging to emulate serial communication in software on 
 **Linear Regulator** drops voltage by burning the excess as heat. Like LM7805, AMS1117 etc. Easy to use (input, output, and 2 capacitors). Cheap and widely available. Output is clean (low electrical noise) good for sensitive analog circuits.
 **Buck Converters** switches input with an inductor & capacitor to step down voltage. Efficiency 80 - 95%. Great for Battery Powered systems.Like LM2596, MP1584, XL4015 etc. Output has more ripple/noise than linear regulators.
 
+## Linear Regulator vs Low Drop Out (LDO) Regulator
+Linear Drop Out (LDO) Regulator is type of Linear Regulator designed to work with a much smaller voltage difference between Voltage In and Voltage Out. Like RT9080, MIC5205
+| Feature | Linear Regulator | Low Drop Out Regulator |
+| --- | --- | --- |
+| Dropout Voltage | 1 - 2 V | < 0.3V |
+| Quiescent Current | mA | uA |
+| Use Case | Main powered | Battery Powered |
 
+> Quiescent Current is the current consumed by IC when it is enabled but there is no load, and the device is not switching.
+
+## What is ESD Protection?
+ESD Stands for Electro Static Discharge. Sudden spark of static electricity. We dont feel much damage, but microchips can be destroyed instantly. Place a part like LESD5D5.0CT1G or SMF5.0A across VBUS-to-GND. Additonally use it for D+, D-.
+
+## What is Diode?
+Diode is one way valve. ex - 1N5819HW 
 
 
 ## Tips & Tricks
 - Cirkit Designer studio for bread board
 - Monochrome lcd for ruggedness 2.4 inch
 - Use internal pullup resistor to avoid adding resistor to button
+
 
 
 
