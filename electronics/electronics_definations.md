@@ -10,6 +10,7 @@ The relation between voltage (V), current (I) and resistance (R) is given by Ohm
 **Voltage Divider** is a circuit that uses resistors to reduce a larger input voltage to a smaller output voltage. A Voltage Divider consists of two resistors connected in series accross a voltage source. The Output Voltage is taken from the connection point between the two resistors.
 
 Vin ——[R1]——•——[R2]——— Ground
+
             |
           Vout
 
@@ -28,4 +29,5 @@ Vin ——[R1]——•——[R2]——— Ground
 | 2 Pins | SDA, SCL | MISO, MOSI, CS, CLK |
 | 115200 baud | 400 kHz | 10 MBPS |
 | Async | Sync | Async |
+
 
