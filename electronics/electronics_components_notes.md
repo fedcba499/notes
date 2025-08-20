@@ -18,9 +18,6 @@
 - tanotis.com
 - techdelivers.com
 
-
-
-
 ## What is difference between Arduino Boards and ESP32 Boards?
 - Esp 32 - 32 bit processor (good for projects which requires high computation power, power management issues)
 - Arduino - 8 bit processor (good for small projects, quick power settings with 9v battery, low computation power)
@@ -66,9 +63,17 @@ Software serial uses bit-banging to emulate serial communication in software on 
 
 **SCL (Serial Clock)** Line is used to synchronise the data transfer between the master & slave device. Direction controlled by Master Device which generates the clock pulses to co-ordinate the timing of data transmission.
 
+## What is difference between Linear Regulator vs Buck Converter?
+**Linear Regulator** drops voltage by burning the excess as heat. Like LM7805, AMS1117 etc. Easy to use (input, output, and 2 capacitors). Cheap and widely available. Output is clean (low electrical noise) good for sensitive analog circuits.
+**Buck Converters** switches input with an inductor & capacitor to step down voltage. Efficiency 80 - 95%. Great for Battery Powered systems.Like LM2596, MP1584, XL4015 etc. Output has more ripple/noise than linear regulators.
+
+
+
+
 ## Tips & Tricks
 - Cirkit Designer studio for bread board
 - Monochrome lcd for ruggedness 2.4 inch
 - Use internal pullup resistor to avoid adding resistor to button
+
 
 
