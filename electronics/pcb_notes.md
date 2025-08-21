@@ -11,5 +11,8 @@ Always try to use, ESP32 XIAO, But if pin out are required more, then we need to
 - Adafruit.com
 - Arduino.com/hardware
 - seeedstudio
+- oshlab (by EasyEDA/ JLC PCB)
+- PCBWay (shared projects)
 
   
+
