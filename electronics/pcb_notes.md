@@ -1,6 +1,6 @@
 ## Table of Contents
-- (#when-to-go-for-designing-of-pcb?)
-- (#what-are-most-used-layer-stack-in-pcb-devkits?)
+- [Intro](#when-to-go-for-designing-of-pcb)
+- [Best](#what-are-most-used-layer-stack-in-pcb-devkits)
 
 ## When to go for designing of PCB?
 When component is not readily available. In our case, breakout board of L89HA is readily available, so we use it directly. When breakout boards are not readily available, or when we want to reduce space, as several through hole components occupy greater space than SMD Components.
@@ -20,6 +20,7 @@ Always try to use, ESP32 XIAO, But if pin out are required more, then we need to
 - Valetron System
 
   
+
 
 
 
