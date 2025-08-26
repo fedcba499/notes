@@ -1,10 +1,2 @@
-title: My Notes
-theme: minima
-navbar:
-- title: Home
-url:/
-- title: Topic.html
-
-
-
-
+theme: jekyll-theme-just-the-docs
+title: Notes
