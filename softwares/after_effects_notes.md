@@ -1,6 +1,0 @@
-- Motion Tracking
-- 3D Camera Tracking
-- Planer Tracking
-- Text Behind Objects
-- Text Behind Moving Objects
-- Typing Text
