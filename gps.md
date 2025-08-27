@@ -37,7 +37,7 @@ better for compact)
 - Carrier Phase Measurement. Very Accurate. Used in Real Time Kinematics and Post Processing Kinematics.
 - Pseudo Random Code. Low Cost GPS
 
-![Carrier Wave Measurement vs Pseudo Random Code](../assets/images/gps_wave.png)
+![Carrier Wave Measurement vs Pseudo Random Code](images/gps_wave.png)
 
 *Carrier Wave Measurement vs Pseudo Random Code*
 

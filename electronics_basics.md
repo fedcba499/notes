@@ -8,11 +8,7 @@ The relation between voltage (V), current (I) and resistance (R) is given by Ohm
 
 ## What is voltage divider? How resistance reduces voltage? How to calculate voltage?
 **Voltage Divider** is a circuit that uses resistors to reduce a larger input voltage to a smaller output voltage. A Voltage Divider consists of two resistors connected in series accross a voltage source. The Output Voltage is taken from the connection point between the two resistors.
-
-Vin ——[R1]——•——[R2]——— Ground
-
-            |
-          Vout
+![voltage_divider.jpg](images/voltage_divider.jpg)
 
 **Formula** Vout = Vin x (R2/(R1+R2))
 - The output voltage is always a fraction of input voltage
