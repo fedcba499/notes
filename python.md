@@ -1,11 +1,11 @@
-## What is decorator?
+## Decorator
 Decorate mean to enhance the appearance of something by adding something unessential.
 - Painting building
 - Adding lights, screens etc to event
 
 > Decorator in Python implies - a function that takes another function as an argument and returns a new function with enhanced functionality.
 
-## What is requirement of VIrtual Environments?
+## Virtual Environments
 The more Python projects you have, the more likely it is that you need to work with different versions of Python libraries, or even different version of Python itself. Newer versions of libraries for one project can break compatibility in another project.
 
 Virtual environments are used to create independent groups of Python libraries, one for each project. Packages installed for one project will not affect other projects or the operating system’s packages.

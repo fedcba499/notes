@@ -1,5 +1,5 @@
-## What it is LibPkg?
-LibPkg stands for Library Package Project. It’s not a symbol or footprint itself — it’s a container that holds:
+## LibPkg
+It stands for Library Package Project. It’s not a symbol or footprint itself — it’s a container that holds:
 - One or more schematic library files (.SchLib)
 - One or more PCB footprint library files (.PcbLib)
 - Optional 3D models (.Step files)
