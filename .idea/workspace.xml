@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="revert to previous version" />
+    <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="deleted single note file">
+      <change beforePath="$PROJECT_DIR$/docs/altium.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/altium.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/colab.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/colab.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/command_prompt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/command_prompt.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/electronics_basics.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/electronics_basics.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/electronics_components.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/electronics_components.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/esp32.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/esp32.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gps.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/gps.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/machine_learning_basics.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/machine_learning_basics.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/markdown.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/meta_xr.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/meta_xr.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/micropython.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/micropython.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/opencv.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/opencv.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pcb.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/pcb.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/plc.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/plc.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pycharm.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/pycharm.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/python.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/python.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/yolo.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/yolo.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +117,7 @@
       <workItem from="1756297579695" duration="7824000" />
       <workItem from="1756307384844" duration="63000" />
       <workItem from="1756359165684" duration="5416000" />
-      <workItem from="1756364681072" duration="296000" />
+      <workItem from="1756364681072" duration="847000" />
     </task>
     <task id="LOCAL-00001" summary="mkdocs">
       <option name="closed" value="true" />
@@ -237,7 +255,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756364862420</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="revert to previous version">
+      <option name="closed" value="true" />
+      <created>1756365076428</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1756365076428</updated>
+    </task>
+    <task id="LOCAL-00019" summary="deleted single note file">
+      <option name="closed" value="true" />
+      <created>1756365174625</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1756365174625</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +303,7 @@
     <MESSAGE value="config file" />
     <MESSAGE value="table of contents test" />
     <MESSAGE value="revert to previous version" />
-    <option name="LAST_COMMIT_MESSAGE" value="revert to previous version" />
+    <MESSAGE value="deleted single note file" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted single note file" />
   </component>
 </project>
