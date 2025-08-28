@@ -5,6 +5,11 @@ on:
     branches:
       - main  # Deploy on push to main branch
 
+permissions:
+  contents: write   # allow pushing to gh-pages
+  pages: write      # needed for Github pages
+  id-token: write   # sometimes required for deployments
+
 
 jobs:
   build-deploy:

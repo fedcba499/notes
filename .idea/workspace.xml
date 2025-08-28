@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="test deploy">
+    <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="test deploy v2">
       <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +106,7 @@
       <workItem from="1756364681072" duration="847000" />
       <workItem from="1756368950931" duration="1177000" />
       <workItem from="1756390494553" duration="492000" />
-      <workItem from="1756397940281" duration="1554000" />
+      <workItem from="1756397940281" duration="1787000" />
     </task>
     <task id="LOCAL-00001" summary="mkdocs">
       <option name="closed" value="true" />
@@ -276,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756399217960</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="test deploy v2">
+      <option name="closed" value="true" />
+      <created>1756399532007</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1756399532007</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +319,7 @@
     <MESSAGE value="deleted single note file" />
     <MESSAGE value="deploy workflow" />
     <MESSAGE value="test deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="test deploy" />
+    <MESSAGE value="test deploy v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="test deploy v2" />
   </component>
 </project>
