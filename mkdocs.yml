@@ -1,0 +1,13 @@
+site_name: My Notes
+
+theme:
+  name: material
+  features:
+    - toc.integrate      # move TOC into left nav
+    - navigation.expand  # auto-expand headings
+    - navigation.sections
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 3   # H2, H3, H4 headings visible
