@@ -17,5 +17,4 @@ Keep Names of Titles crisp
 > Bad Practise - What is Refactor? \
 > Good Practise - Refactor
 
-### Use Github.com to edit md files instead of pycharm or dithub.dev
 
