@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="deleted single note file">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/computerbasics/github.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/computerbasics/mkdocs.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/python/command_prompt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/computerbasics/command_prompt.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/python/markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/computerbasics/markdown.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/python/meta_xr.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/computerbasics/meta_xr.md" afterDir="false" />
+    <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="deploy workflow">
+      <change beforePath="$PROJECT_DIR$/docs/computerbasics/github.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/computerbasics/github.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +106,7 @@
       <workItem from="1756364681072" duration="847000" />
       <workItem from="1756368950931" duration="1177000" />
       <workItem from="1756390494553" duration="492000" />
-      <workItem from="1756397940281" duration="811000" />
+      <workItem from="1756397940281" duration="1248000" />
     </task>
     <task id="LOCAL-00001" summary="mkdocs">
       <option name="closed" value="true" />
@@ -267,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756365174625</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="deploy workflow">
+      <option name="closed" value="true" />
+      <created>1756398779304</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1756398779304</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +301,7 @@
     <MESSAGE value="table of contents test" />
     <MESSAGE value="revert to previous version" />
     <MESSAGE value="deleted single note file" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted single note file" />
+    <MESSAGE value="deploy workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploy workflow" />
   </component>
 </project>
