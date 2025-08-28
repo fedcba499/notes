@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="deleted single note file">
-      <change beforePath="$PROJECT_DIR$/docs/altium.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/altium.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/colab.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/colab.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command_prompt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/command_prompt.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/electronics_basics.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/electronics_basics.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/electronics_components.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/electronics_components.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/esp32.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/esp32.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gps.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/gps.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machine_learning_basics.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/machine_learning_basics.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/markdown.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/meta_xr.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/meta_xr.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/micropython.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/micropython.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/opencv.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/opencv.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pcb.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/pcb.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/plc.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/plc.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pycharm.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/pycharm.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/python.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/python.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/yolo.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/yolo.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/computerbasics/github.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/computerbasics/mkdocs.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/python/command_prompt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/computerbasics/command_prompt.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/python/markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/computerbasics/markdown.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/python/meta_xr.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/computerbasics/meta_xr.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,24 +58,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Welcome/PycharmProjects/notes/docs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Welcome/PycharmProjects/notes/docs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Welcome\PycharmProjects\notes\docs" />
@@ -92,6 +83,8 @@
       <recent name="C:\Users\Welcome\PycharmProjects\notes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Welcome\PycharmProjects\notes\docs\computerbasics" />
+      <recent name="C:\Users\Welcome\PycharmProjects\notes\docs\computer" />
       <recent name="C:\Users\Welcome\PycharmProjects\notes\docs" />
       <recent name="C:\Users\Welcome\PycharmProjects\notes\assets" />
       <recent name="C:\Users\Welcome\PycharmProjects\notes" />
@@ -118,6 +111,9 @@
       <workItem from="1756307384844" duration="63000" />
       <workItem from="1756359165684" duration="5416000" />
       <workItem from="1756364681072" duration="847000" />
+      <workItem from="1756368950931" duration="1177000" />
+      <workItem from="1756390494553" duration="492000" />
+      <workItem from="1756397940281" duration="811000" />
     </task>
     <task id="LOCAL-00001" summary="mkdocs">
       <option name="closed" value="true" />

@@ -1,0 +1,1 @@
+mkdocs serve #command to run static website
