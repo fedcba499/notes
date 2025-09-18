@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="test deploy v2">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+    <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="test deploy v3">
+      <change afterPath="$PROJECT_DIR$/docs/computerbasics/yt-dlp.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +87,6 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PY-252.23892.515" />
         <option value="bundled-python-sdk-7e47963ff851-f0eec537fc84-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.515" />
       </set>
     </attachedChunks>
@@ -106,7 +106,8 @@
       <workItem from="1756364681072" duration="847000" />
       <workItem from="1756368950931" duration="1177000" />
       <workItem from="1756390494553" duration="492000" />
-      <workItem from="1756397940281" duration="1787000" />
+      <workItem from="1756397940281" duration="2754000" />
+      <workItem from="1758114606710" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="mkdocs">
       <option name="closed" value="true" />
@@ -284,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756399532007</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="test deploy v3">
+      <option name="closed" value="true" />
+      <created>1756399763270</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1756399763270</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +329,7 @@
     <MESSAGE value="deploy workflow" />
     <MESSAGE value="test deploy" />
     <MESSAGE value="test deploy v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="test deploy v2" />
+    <MESSAGE value="test deploy v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="test deploy v3" />
   </component>
 </project>
