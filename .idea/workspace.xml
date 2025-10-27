@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="test deploy v3">
-      <change afterPath="$PROJECT_DIR$/docs/computerbasics/yt-dlp.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/electronics/drone.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gis.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gis.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/python/pycharm.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/python/pycharm.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +37,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/fedcba499/notes.git&quot;,
-    &quot;accountId&quot;: &quot;6fbc40a0-93de-42bb-85d9-cd6fd7ece72f&quot;
+    &quot;accountId&quot;: &quot;78610592-a52f-4b79-a34d-1062054ba410&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -304,7 +306,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

@@ -63,3 +63,7 @@ Surface temperature: This product measures the Earth's surface temperature in Ke
 ## Tips & Tricks
 - bbbike.com for vector files of a particular location, files are from open street maps platform. In bbbike vector files are classified into roads, building etc
 - SAS Planet - sasgis.org
+
+## Projects not worth time
+- Hazard prediction using qgis classes and module. No body is interested, very less documentation on qgis plugin development, it is of less significance, as it is very unlikely in current context.
+- 

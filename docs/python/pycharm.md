@@ -1,3 +1,7 @@
+## Why PyCharm?
+PyCharm is paid software, offers several additional features such as cloning of github repos, grammer error etc without any hussle, it is very user friendly, thanks to jetbrains, their ide also used in android studio.
+> It saves my time due to their efforts putin in making IDE.
+
 ## Refactor
 When we change folder structure or rename files, it associated relative paths also changes, for example when we insert images in markdown files, if we change folder structure, then we need to manually change all path instances where images used. 
 
