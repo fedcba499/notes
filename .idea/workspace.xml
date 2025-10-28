@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="added drone">
+    <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="added drone content">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/electronics/drone.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/drone.md" afterDir="false" />
     </list>
@@ -301,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761585417413</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added drone content">
+      <option name="closed" value="true" />
+      <created>1761621560490</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1761621560490</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,6 +359,7 @@
     <MESSAGE value="test deploy v2" />
     <MESSAGE value="test deploy v3" />
     <MESSAGE value="added drone" />
-    <option name="LAST_COMMIT_MESSAGE" value="added drone" />
+    <MESSAGE value="added drone content" />
+    <option name="LAST_COMMIT_MESSAGE" value="added drone content" />
   </component>
 </project>
