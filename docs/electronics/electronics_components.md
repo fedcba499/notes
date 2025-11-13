@@ -68,7 +68,7 @@ Software serial uses bit-banging to emulate serial communication in software on 
 **Buck Converters** switches input with an inductor & capacitor to step down voltage. Efficiency 80 - 95%. Great for Battery Powered systems.Like LM2596, MP1584, XL4015 etc. Output has more ripple/noise than linear regulators.
 
 ## Linear Regulator vs Low Drop Out (LDO) Regulator
-Linear Drop Out (LDO) Regulator is type of Linear Regulator designed to work with a much smaller voltage difference between Voltage In and Voltage Out. Like RT9080, MIC5205
+Low Drop Out (LDO) Regulator is type of Linear Regulator designed to work with a much smaller voltage difference between Voltage In and Voltage Out. Like RT9080, MIC5205
 | Feature | Linear Regulator | Low Drop Out Regulator |
 | --- | --- | --- |
 | Dropout Voltage | 1 - 2 V | < 0.3V |
@@ -83,6 +83,34 @@ ESD Stands for Electro Static Discharge. Sudden spark of static electricity. We 
 ## What is Diode?
 Diode is one way valve. ex - 1N5819HW 
 
+## Power Conversion 5v / 3.3v
+
+### Buck Converter
+
+- AMS1117 3.3 / 5 LDO (Low Drop Out). It is good to to drop few volts by Advanced Monolithic Systems.AMS1117 is a lower cost clone of LM1117 of Texas Instruments. 800mA power output
+- LM1117 is Low Drop Out Linear Regulator by Texas Instruments
+- LM2596 Buck Converter Adjustable by Texas Instruments. It can drop more than 5 volts. also available in Fixed 3.3V, 5V & 12V.
+- MP1584 Buck Converter Adjustable
+- MP2307 Buck Converter (MINI-360) is modern version of LM2596 buck convertor.
+> MP Series IC are made by Monolithic Power System (MPS) based in US.
+- XL4005 Buck Converter Adjustable (For Heavy Loads. More than 2 Ampere)
+
+### Boost Converter
+- XL6009 
+> XL Series ICs, buck or boost converters are by XLSemi ( Chinese Company).
+
+### Advanced
+- RT9080 Series LDO IC made by Richtek Technology Corportation is a Taiwan based company. 600 mA Power Output.
+- AP2112 Series LDO IC made by Diodes Incorporated is a US Company.
+- XC6222 series LDO IC made by Torex Semiconductor Ltd is a Japanese company.
+
+## What is the use of enable pin in LDO IC?
+The enable (EN) pin on a low-dropout voltage regulator (LDO) acts as an ON/OFF switch to control the regulator's output. It allows a microcontroller or other logic circuit to shut down the LDO to save power or to enable it for a specific application. 
+
+## Connector
+- JST Connector 2 Pin for Lipo Battery. JST Stands for Japan Solderless Terminal. JST-PH (2mm), JST-XH (2.54 mm), JST-SH (1mm).
+
+- Screw Terminal (Block Terminal Connector). KF128 (5.08mm pitch), KF301 (5.08mm). Mainly used in AC Current.
 
 ## Tips & Tricks
 - Cirkit Designer studio for bread board

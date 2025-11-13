@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="added drone content">
+    <list default="true" id="c49349a0-dbf2-4e4e-b89c-60603f36558b" name="Changes" comment="added drone battery pack">
+      <change afterPath="$PROJECT_DIR$/docs/electronics/3d_printer.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/electronics/ardupilot.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/electronics/iNav.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/electronics/drone.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/drone.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/electronics/electronics_components.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/electronics/electronics_components.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761621560490</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added drone battery pack">
+      <option name="closed" value="true" />
+      <created>1761673210320</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1761673210320</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,6 +372,7 @@
     <MESSAGE value="test deploy v3" />
     <MESSAGE value="added drone" />
     <MESSAGE value="added drone content" />
-    <option name="LAST_COMMIT_MESSAGE" value="added drone content" />
+    <MESSAGE value="added drone battery pack" />
+    <option name="LAST_COMMIT_MESSAGE" value="added drone battery pack" />
   </component>
 </project>

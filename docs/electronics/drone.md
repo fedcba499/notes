@@ -4,6 +4,7 @@
 - Botlab dynamics (made in India)
 - The Dark Matter (https://thedarkmatter.in/)
 - Pixhawk
+- iflight flight controllers
 
 ## Firmware
 - Betaflight
@@ -11,6 +12,9 @@
 - Ardupilot
 
 > Start with ardupilot as it is good with stability of drone, then switch to inav, inav is very easy to configure, then move to betaflight, its is best in class firmware.
+
+> for gps features, like hold, hover etc inav is much better than betaflight, as betaflight comes with minimum configuration with respect to gps functionality.
+
 
 
 ## Program Control
@@ -74,6 +78,8 @@ Electronic speed controllers comes with 2 processing power 8 bit processor and 3
 Analog Camera are low cost with little lag but offers low latency
 CADDXFPV brand 
 
+dji air 3
+
 ## Frames
 Carbon fibre frames are good with stability than platic frame drones.
 
@@ -83,16 +89,32 @@ Speedybee BEE35 -
 
 SpeedyBee BEE25
 
+dead cad frame is not symmetrical and x frame is symmetrical
+
+unibody carbon fiber frame or one-piece carbon fiber frame generally 2 mm
+
+dont go after unibody frame, it is difficult to find (as there is so much wastage of carbon fiber sheet), go for mark4 5 inch, 7 inch, 10 inch. for beginning go for 7 inch.
+
+7 inch good for smooth moving
+
 ## Rotors
 > Rotor has 2 components, 1. Stator (static and fixed to arm), 2. Rotor (outer moving part). Configuration of rotor has 6015 stands for 60mm diameter of rotor and 15 mm height. magnets are in rotor. 
 
-- Readytosky 
+> Heavier drone requires lower kv motor, lighter requires higher kv motor.
+
+> KV not stands for kilo volt, it stands for number of rotations per minute, if we supply 1 v power, with no load attached.
+
+> If we take larger kv motor, with smaller propeller for heavier drone, it might burn out motor. it is better to take smaller kv motor with larger propeller, so that it is easier for motor to carry weight.
+
+> Higher kv motor are designed for faster fpv, where speed is more important than weight carrying capacity.
+
+- Readytosky 920kv motor is suited for larger propeller, aimed at stabitly at lower rpm. it is suited with 3s or 4s battery.
 - GEPRC 2105.5
 - speedybee 
-- EMAX CO Series
+- EMAX ECO II Series - aimed at smaller and faster drones
 - VectorTechnics (Made in India Motor) - Generally Large Drones
-
-
+- 2212 920kv
+- 
 
 
 
@@ -100,7 +122,14 @@ SpeedyBee BEE25
 ## Propellers
 Two sided propellers are better than 3 sided propellers as 3 sided propellers moves very fast difficult to control by beginners
 
+7×4.5 2-blade prop (polycarbonate, good brand). Or as a slightly safer/milder option: 7×4 2-blade (less pitch = less aggressive).
+
+braided wires to protect motor wires from propeller short circuiting.
+
+
+
 ## Simulation training software
+freefly software in steam program.
 
 ## Onlinestores
 Quadkart
