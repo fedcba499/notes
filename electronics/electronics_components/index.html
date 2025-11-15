@@ -957,6 +957,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#buck-boost-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buck Boost Converter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#advanced" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -969,6 +980,67 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transistor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transistor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transistor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bjt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BJT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mosfet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MOSFET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logic-level-mosfet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logic Level Mosfet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relay
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1169,6 +1241,34 @@
     
   
     Plc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../store/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Store
   
 
     
@@ -1546,6 +1646,8 @@
 <ul>
 <li>AMS1117 3.3 / 5 LDO (Low Drop Out). It is good to to drop few volts by Advanced Monolithic Systems.AMS1117 is a lower cost clone of LM1117 of Texas Instruments. 800mA power output</li>
 <li>LM1117 is Low Drop Out Linear Regulator by Texas Instruments</li>
+<li>LM7805, LM7809, LM7812, LM7833 (Linear Regulator by ST Electronics)</li>
+<li>LD1117v33 input range from 4.3v to 15v</li>
 <li>LM2596 Buck Converter Adjustable by Texas Instruments. It can drop more than 5 volts. also available in Fixed 3.3V, 5V &amp; 12V.</li>
 <li>MP1584 Buck Converter Adjustable</li>
 <li>MP2307 Buck Converter (MINI-360) is modern version of LM2596 buck convertor.<blockquote>
@@ -1556,10 +1658,16 @@
 </ul>
 <h3 id="boost-converter">Boost Converter</h3>
 <ul>
+<li>MT3608</li>
 <li>XL6009 <blockquote>
-<p>XL Series ICs, buck or boost converters are by XLSemi ( Chinese Company).</p>
+<p>XL Series ICs, buck or boost converters are by XLSemi ( Chinese Company).
+</p>
 </blockquote>
 </li>
+</ul>
+<h3 id="buck-boost-converter">Buck Boost Converter</h3>
+<ul>
+<li>XL6019</li>
 </ul>
 <h3 id="advanced">Advanced</h3>
 <ul>
@@ -1567,6 +1675,33 @@
 <li>AP2112 Series LDO IC made by Diodes Incorporated is a US Company.</li>
 <li>XC6222 series LDO IC made by Torex Semiconductor Ltd is a Japanese company.</li>
 </ul>
+<h2 id="transistor">Transistor</h2>
+<p>Transistor are like switches or amplifiers (if we pass small current or voltage, it will let large current flow through it.). There are mainly 2 types of transistor.</p>
+<h3 id="bjt">BJT</h3>
+<ul>
+<li>BJT stands for Bipolar Junction Transistor.</li>
+<li>It's of 2 Types NPN &amp; PNP. </li>
+<li>Current is applied to open gate. Less efficient due to power consumption.</li>
+<li>Suitable for small power. 100 - 200 mA Max</li>
+<li>2N222, BC547, BC557, TIP120</li>
+</ul>
+<h3 id="mosfet">MOSFET</h3>
+<ul>
+<li>MOSFET stands for Metal Oxide Semiconductor Field Effect Transistor.</li>
+<li>It's of 2 types N Channel, P Channel. </li>
+<li>Voltage is applied to open gate. More efficient as it does not draw current. </li>
+<li>Suitable for large Power consumption devices.  upto 100A. </li>
+<li>IRLZ44N, IRF5305, IRF520</li>
+<li>MOSFET Driver - TC4420, TC4428, IR2113<blockquote>
+<p>IR stands for International Rectifier is a American Company.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="logic-level-mosfet">Logic Level Mosfet</h3>
+<p>These can open gate with 3.3v or 5v supply. It is denoted by L in IRL such as IRLZ44N, IRL540N, 2N7000. These are easier to configure with Micro Controllers.</p>
+<p>Use MOSFET than BJT, Due to Its efficiency</p>
+<h2 id="relay">Relay</h2>
+<p>Relay Modules are electro mechanical type switches. It is good for AC load. Creates Isolation between controller and load.</p>
 <h2 id="what-is-the-use-of-enable-pin-in-ldo-ic">What is the use of enable pin in LDO IC?</h2>
 <p>The enable (EN) pin on a low-dropout voltage regulator (LDO) acts as an ON/OFF switch to control the regulator's output. It allows a microcontroller or other logic circuit to shut down the LDO to save power or to enable it for a specific application. </p>
 <h2 id="connector">Connector</h2>
