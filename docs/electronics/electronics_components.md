@@ -89,6 +89,8 @@ Diode is one way valve. ex - 1N5819HW
 
 - AMS1117 3.3 / 5 LDO (Low Drop Out). It is good to to drop few volts by Advanced Monolithic Systems.AMS1117 is a lower cost clone of LM1117 of Texas Instruments. 800mA power output
 - LM1117 is Low Drop Out Linear Regulator by Texas Instruments
+- LM7805, LM7809, LM7812, LM7833 (Linear Regulator by ST Electronics)
+- LD1117v33 input range from 4.3v to 15v
 - LM2596 Buck Converter Adjustable by Texas Instruments. It can drop more than 5 volts. also available in Fixed 3.3V, 5V & 12V.
 - MP1584 Buck Converter Adjustable
 - MP2307 Buck Converter (MINI-360) is modern version of LM2596 buck convertor.
@@ -96,13 +98,48 @@ Diode is one way valve. ex - 1N5819HW
 - XL4005 Buck Converter Adjustable (For Heavy Loads. More than 2 Ampere)
 
 ### Boost Converter
+- MT3608
 - XL6009 
 > XL Series ICs, buck or boost converters are by XLSemi ( Chinese Company).
+> 
+
+### Buck Boost Converter
+- XL6019
+
 
 ### Advanced
 - RT9080 Series LDO IC made by Richtek Technology Corportation is a Taiwan based company. 600 mA Power Output.
 - AP2112 Series LDO IC made by Diodes Incorporated is a US Company.
 - XC6222 series LDO IC made by Torex Semiconductor Ltd is a Japanese company.
+
+## Transistor
+Transistor are like switches or amplifiers (if we pass small current or voltage, it will let large current flow through it.). There are mainly 2 types of transistor.
+
+### BJT
+- BJT stands for Bipolar Junction Transistor.
+- It's of 2 Types NPN & PNP. 
+- Current is applied to open gate. Less efficient due to power consumption.
+- Suitable for small power. 100 - 200 mA Max
+- 2N222, BC547, BC557, TIP120
+
+### MOSFET
+- MOSFET stands for Metal Oxide Semiconductor Field Effect Transistor.
+- It's of 2 types N Channel, P Channel. 
+- Voltage is applied to open gate. More efficient as it does not draw current. 
+- Suitable for large Power consumption devices.  upto 100A. 
+- IRLZ44N, IRF5305, IRF520
+- MOSFET Driver - TC4420, TC4428, IR2113
+> IR stands for International Rectifier is a American Company.
+
+### Logic Level Mosfet
+These can open gate with 3.3v or 5v supply. It is denoted by L in IRL such as IRLZ44N, IRL540N, 2N7000. These are easier to configure with Micro Controllers.
+
+Use MOSFET than BJT, Due to Its efficiency
+
+
+## Relay
+Relay Modules are electro mechanical type switches. It is good for AC load. Creates Isolation between controller and load.
+
 
 ## What is the use of enable pin in LDO IC?
 The enable (EN) pin on a low-dropout voltage regulator (LDO) acts as an ON/OFF switch to control the regulator's output. It allows a microcontroller or other logic circuit to shut down the LDO to save power or to enable it for a specific application. 
