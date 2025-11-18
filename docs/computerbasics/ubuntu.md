@@ -80,6 +80,62 @@ Packages from repositories
 | restricted | closed source but maintained by ubuntu | intel firmware, wifi drivers, nvidia drivers |
 | PPA | Third Party | Kicad, Qgis, VS Code |
 
+## Thumb Rule 
+
+```
+APT           -   Command line tools
+AppImage      -   if AppImage available on official website
+Snap          -   GUI maintained by ubuntu
+Flatpak       -   GUI maintained by community
+```
+
+## APT command list
+
+### Syntax
+```bash
+apt command
+apt [options] command
+apt [options] command
+apt [options] command pkg1
+apt [options] command pkg1 pkg2
+```
+
+```bash
+# Download Package information from all sources (including added third party PPA)
+sudo apt update
+
+# Upgrade all packages currently installed on the system
+sudo apt upgrade
+
+# List of packages that can be upgraded on the system
+apt list --upgradable
+
+# Install package
+sudo apt install pkgname
+
+# Delete or remove package (configuration files stays)
+sudo apt remove pkgname
+
+# Delete or remove package and configuration files
+sudo apt purge pkgname
+
+# Removes automatically installed dependency packages that are no longer needed by any installed package
+apt autoremove
+
+# Search packages (in name or description)
+apt search pkgname
+
+# List packages
+apt list pkgname
+apt list --installed
+apt list --installed | grep pkgname
+
+# List package dependency
+apt depends pkgname
+
+# Information about package
+apt show pkgname
+```
 
 
 
