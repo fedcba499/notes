@@ -1,5 +1,17 @@
-## Ubuntu Version Names
-Ubuntu uses version names for number, so that it is easier to remember.
+## Linux
+Linux is a kernal (similar to engine of car), it helps to interact with hardware of computer.
+
+## Debian
+Debian is a complete Operating System, with package manager (apt, apt-get, dpkg), command line tools, GUI (GNOME) etc.
+
+## dpkg
+dpkg stands for Debian Package, it is low level package manager. It does not install dependency
+
+## apt
+apt stands for Advaced Packaging tool, it is high level package manager. It uses dpkg underneath and adds dependency libraries also. apt is new version of apt-get. apt include apt-get and other features.
+
+## Ubuntu
+Ubuntu is Operating System based on Debain OS with additional functionality. Ubuntu uses version names for number, so that it is easier to remember.
 
 - Ubuntu 24.04 - noble
 - Ubuntu 22.04 - jammy
@@ -15,10 +27,10 @@ Long Term Release is a software which has undergone significant amount of testin
 For work purposes it is better to select LTR version, as it less prone to bugs and behaves as what is expected out of it.
 
 ## Ubuntu Application Installation
-In Ubuntu, a program or a software can be installed from various stores, such as APT (Advanced Packaging Tool), Flatpak (Flathub - GUI), Snap Store. Program can also be downloaded in portable format as AppImage format.
+In Ubuntu, a program or a software can be installed from various stores, such as APT (Advanced Packaging Tool), Flatpak (Flathub - GUI), Snap Store. Program can also be downloaded in portable format as AppImage format. apt uses shared library like pip in python, but it may result in conflicting version of library used by other applications. flathub, snap and appimage uses sandbox like venv, they have their own library set (recommanded method). flatpak is recommended it is community driven, where as snap is controlled by ubuntu. similar to playstore and f droid anology.
 
 ### APT
-APT stands for Advanced Packaging Tool, programs can be installed with command. 
+APT stands for Advanced Packaging Tool, programs can be installed with command. APT grants superuser user access to entire system. It is recommended to intsall trusted packages only. 
 
 ```bash
 # update store repository list
@@ -30,6 +42,9 @@ sudo apt install vlc libreoffice code
 
 #### PPA
 PPA stands for Personal Package Archive. It is like a third party application store. As a developer, my program takes certain time to get verified by APT maintainers, to push latest update to my users, i create a third party store, individual can get this store list as well and install their latest version.
+
+PPA is a repository hosted on launchpad.net (maintained by ubuntu). PPA are used in ubuntu and ubuntu based os.
+
 
 ```bash
 sudo add-apt-repository ppa:<PPA_info>
@@ -64,6 +79,10 @@ Packages from repositories
 | multiverse | closed source | rar, steam, ttf-mscorefonts-installer |
 | restricted | closed source but maintained by ubuntu | intel firmware, wifi drivers, nvidia drivers |
 | PPA | Third Party | Kicad, Qgis, VS Code |
+
+
+
+
 
 
 

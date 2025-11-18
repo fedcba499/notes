@@ -1,5 +1,8 @@
 # Notes
-A better way to save Notes in markdown files (.md) than google keep
+A better way to save Notes in markdown files (.md) than google keep.
+Link is at fedcba499.github.io/notes. click on below link.
+
+[Notes](fedcba499.github.io/notes)
 
 ## Guidelines
 
