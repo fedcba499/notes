@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ubuntu-version-names" class="md-skip">
+        <a href="#linux" class="md-skip">
           Skip to content
         </a>
       
@@ -529,10 +529,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ubuntu-version-names" class="md-nav__link">
+  <a href="#linux" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ubuntu Version Names
+        Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debian
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dpkg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dpkg
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        apt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubuntu
       
     </span>
   </a>
@@ -563,7 +607,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#apt" class="md-nav__link">
+  <a href="#apt_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         APT
@@ -1340,8 +1384,16 @@
 
   <h1>Ubuntu</h1>
 
-<h2 id="ubuntu-version-names">Ubuntu Version Names</h2>
-<p>Ubuntu uses version names for number, so that it is easier to remember.</p>
+<h2 id="linux">Linux</h2>
+<p>Linux is a kernal (similar to engine of car), it helps to interact with hardware of computer.</p>
+<h2 id="debian">Debian</h2>
+<p>Debian is a complete Operating System, with package manager (apt, apt-get, dpkg), command line tools, GUI (GNOME) etc.</p>
+<h2 id="dpkg">dpkg</h2>
+<p>dpkg stands for Debian Package, it is low level package manager. It does not install dependency</p>
+<h2 id="apt">apt</h2>
+<p>apt stands for Advaced Packaging tool, it is high level package manager. It uses dpkg underneath and adds dependency libraries also. apt is new version of apt-get. apt include apt-get and other features.</p>
+<h2 id="ubuntu">Ubuntu</h2>
+<p>Ubuntu is Operating System based on Debain OS with additional functionality. Ubuntu uses version names for number, so that it is easier to remember.</p>
 <ul>
 <li>Ubuntu 24.04 - noble</li>
 <li>Ubuntu 22.04 - jammy</li>
@@ -1355,9 +1407,9 @@
 <p>Long Term Release is a software which has undergone significant amount of testing and majority of bugs are resolved, company will provide support for it for long term. Where as Latest release has advanced features, but it may have bugs which are not noticed, it will undergo frequent changes to overcome these bugs. after a period of 1 or 2 years it becomes Long term Release.</p>
 <p>For work purposes it is better to select LTR version, as it less prone to bugs and behaves as what is expected out of it.</p>
 <h2 id="ubuntu-application-installation">Ubuntu Application Installation</h2>
-<p>In Ubuntu, a program or a software can be installed from various stores, such as APT (Advanced Packaging Tool), Flatpak (Flathub - GUI), Snap Store. Program can also be downloaded in portable format as AppImage format.</p>
-<h3 id="apt">APT</h3>
-<p>APT stands for Advanced Packaging Tool, programs can be installed with command. </p>
+<p>In Ubuntu, a program or a software can be installed from various stores, such as APT (Advanced Packaging Tool), Flatpak (Flathub - GUI), Snap Store. Program can also be downloaded in portable format as AppImage format. apt uses shared library like pip in python, but it may result in conflicting version of library used by other applications. flathub, snap and appimage uses sandbox like venv, they have their own library set (recommanded method). flatpak is recommended it is community driven, where as snap is controlled by ubuntu. similar to playstore and f droid anology.</p>
+<h3 id="apt_1">APT</h3>
+<p>APT stands for Advanced Packaging Tool, programs can be installed with command. APT grants superuser user access to entire system. It is recommended to intsall trusted packages only. </p>
 <pre><code class="language-bash"># update store repository list
 sudo apt update 
 
@@ -1366,6 +1418,7 @@ sudo apt install vlc libreoffice code
 </code></pre>
 <h4 id="ppa">PPA</h4>
 <p>PPA stands for Personal Package Archive. It is like a third party application store. As a developer, my program takes certain time to get verified by APT maintainers, to push latest update to my users, i create a third party store, individual can get this store list as well and install their latest version.</p>
+<p>PPA is a repository hosted on launchpad.net (maintained by ubuntu). PPA are used in ubuntu and ubuntu based os.</p>
 <pre><code class="language-bash">sudo add-apt-repository ppa:&lt;PPA_info&gt;
 </code></pre>
 <p>By using PPA, we can install application which are not in apt store. we can add additional application list other than apt store.</p>
