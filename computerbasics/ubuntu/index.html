@@ -333,6 +333,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../bash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bash
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../command_prompt/" class="md-nav__link">
         
   
@@ -639,6 +667,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#thumb-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thumb Rule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apt-command-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APT command list
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APT command list">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntax
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -780,6 +847,34 @@
     
   
     Altium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../electronics/arduino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arduino
   
 
     
@@ -1471,6 +1566,55 @@ sudo apt install kicad=7.0.0-1ubuntu
 </tr>
 </tbody>
 </table>
+<h2 id="thumb-rule">Thumb Rule</h2>
+<pre><code>APT           -   Command line tools
+AppImage      -   if AppImage available on official website
+Snap          -   GUI maintained by ubuntu
+Flatpak       -   GUI maintained by community
+</code></pre>
+<h2 id="apt-command-list">APT command list</h2>
+<h3 id="syntax">Syntax</h3>
+<pre><code class="language-bash">apt command
+apt [options] command
+apt [options] command
+apt [options] command pkg1
+apt [options] command pkg1 pkg2
+</code></pre>
+<pre><code class="language-bash"># Download Package information from all sources (including added third party PPA)
+sudo apt update
+
+# Upgrade all packages currently installed on the system
+sudo apt upgrade
+
+# List of packages that can be upgraded on the system
+apt list --upgradable
+
+# Install package
+sudo apt install pkgname
+
+# Delete or remove package (configuration files stays)
+sudo apt remove pkgname
+
+# Delete or remove package and configuration files
+sudo apt purge pkgname
+
+# Removes automatically installed dependency packages that are no longer needed by any installed package
+apt autoremove
+
+# Search packages (in name or description)
+apt search pkgname
+
+# List packages
+apt list pkgname
+apt list --installed
+apt list --installed | grep pkgname
+
+# List package dependency
+apt depends pkgname
+
+# Information about package
+apt show pkgname
+</code></pre>
 
 
 
