@@ -56,6 +56,7 @@ sudo apt install ./package.deb
 ```
 
 Packages from repositories
+
 | Repository | Remarks | Examples |
 | --- | --- | --- |
 | main | opensource and ubuntu maintained | bash, apt, python3, firefox, LibreOffice, GNOME desktop |
@@ -63,4 +64,6 @@ Packages from repositories
 | multiverse | closed source | rar, steam, ttf-mscorefonts-installer |
 | restricted | closed source but maintained by ubuntu | intel firmware, wifi drivers, nvidia drivers |
 | PPA | Third Party | Kicad, Qgis, VS Code |
+
+
 
