@@ -154,32 +154,40 @@ pinMode(7, INPUT_PULLUP);
 
 ## pinMode
 
-pinMode(pin, mode)
+```cpp
+pinMode(pin, mode);
+
+pinMode(pin, OUTPUT);   
+
+pinMode(pin);       // mode default value is INPUT
+```
 
 pinmode is a function, used in setup() function to configure a specified pin to behave either as an INPUT or an OUTPUT
 
-pinMode(pin, OUTPUT);    
-
-Arduino digital pins default to input.
-
-pinMode(pin) == pinMode(pin, INPUT)
 
 ## digitalRead
+
+```cpp
 digitalRead(pin)
+```
 
 digitalRead is a function, used to read the value from specified digital pin with the result either HIGH or LOW.
 
 pin value can be from 0 - 13
 
 ## digitalWrite
+```cpp
 digitalWrite(pin, value)
+```
 
 digitalWrite is a function, used to write / outputs either logic level HIGH or LOW value to specified digital pin.
 
 pin value can be from 0 - 13
 
 ## analogRead
+```cpp
 analogRead(pin)
+```
 
 analogRead is a function, used to reads the value from a specified analog pin with a 10 bit resolution. 
 
@@ -195,7 +203,9 @@ Digital pins are bidirectional, however, analog pins are input only. Analog pins
 Analog pins can be used as Digital Signals also.
 
 ## analogWrite
+```cpp
 analogWrite(pin, value)
+```
 
 analogWrite function, writes pseudo-analog value using hardware enabled PWM (Pulse Width Modulation). PWM is digital. it rapidly toggles between HIGH (5v) and LOW (Ov), by varying percentage of time, it create average voltage. 
 
@@ -230,6 +240,17 @@ Serial.write()                  //
 Serial.available()
 Serial.read()
 ```
+
+## pulseIn
+
+```cpp
+pulseIn(pin, value);
+
+pulseIn(pin, value, timeout);   //  timeout default value is 1 second.
+```
+pulseIn() function measures the duration of a pulse on a digital pin. It waits for the pin to go HIGH or LOW, starts timing, then waits for it to return to original state. pulseIn() function returns a unsigned long value ie pulse duration in microseconds.
+
+
 
 
 
