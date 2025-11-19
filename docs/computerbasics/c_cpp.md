@@ -82,3 +82,11 @@ Access Specifier are keywords that controls the visibility and accessibility of 
 - private : can be accessed from class only. default is private.
 - protected : can be accessed from class and by derived (child) class only.
 
+## include
+
+```cpp
+#include <Arduino.h>        // searches in system libraries first.
+
+#include "Arduino.h"        // searches in current directory first. useful for our own header files.     
+```
+

@@ -137,6 +137,17 @@ apt depends pkgname
 apt show pkgname
 ```
 
+## cmd line tools vs GUI tools
+Command Line Tools are better than GUI tools. Taking example of yt-dlp (command line tool for downloading youtube video), where requirement is to download youtube video. using yt-dlp we just need to pass link as an argument, it does every thing with default settings and download video
+
+```bash
+yt-dlp https://www.youtube.com/watch?v=example
+```
+
+It helps developer to focus on code which is essential to download, rather than wasting time on creating GUI, which is time consuming as well as he need to cater for various os. command line tools are universal can easily run on any OS, and can focus on its tasks.
+
+Ex - yt-dlp, ffmpeg, git etc.
+
 
 
 
