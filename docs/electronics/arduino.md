@@ -250,7 +250,22 @@ pulseIn(pin, value, timeout);   //  timeout default value is 1 second.
 ```
 pulseIn() function measures the duration of a pulse on a digital pin. It waits for the pin to go HIGH or LOW, starts timing, then waits for it to return to original state. pulseIn() function returns a unsigned long value ie pulse duration in microseconds.
 
+## define
 
+```cpp
+#define LED_PIN 13
+```
+- No variable int created, saved 4bytes of memory.
+- No Type safety (#define can be used aganist for int, float, string etc. it replaces text with value). like global constants.
+- It is old style to save memory. not a recommended method.
+
+```cpp
+// old style (still works, saves RAM)
+#define LED_PIN 13
+
+// Modern style (Recommended)
+const int LED_PIN 13
+```
 
 
 
