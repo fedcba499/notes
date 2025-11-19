@@ -20,4 +20,10 @@ Keep Names of Titles crisp
 > Bad Practise - What is Refactor? \
 > Good Practise - Refactor
 
+### Program
+> Constants - Captial (HIGH, LOW, INPUT, BUFFER)
+> Classes / Object - UpperCamelCase (Serial, HardwareSerial)
+> Functions / Methods - lowerCamelCase (pinMode, digitalRead, analogWrite)
+
+
 
