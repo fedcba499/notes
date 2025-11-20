@@ -137,12 +137,40 @@ For each CLASS there are several ID. Consider NAV CLASS (0x01)
 
 ## RTCM3 Protocol
 
-RTCM 3.x Corrections from a Local Base Station → If you have a nearby base station (e.g., ZED-F9P, CORS network), you can send RTCM corrections over UART or Bluetooth for better accuracy. (Both modules can use this). Rtcm support dgnss modules ublox are as under
-- Neo m8p
-- Zed f9p
-- Zed f9r ( includes imu )
-- Neo f9p
-- Neo m9n
+RTCM 3 stands for Radio Technical Commision for Maritime Serivices, Version 3. It is binary protocol (similar to UBX Protocol) used for High Precision GPS Corrections.
+
+```txt
+Base Station (knows exact position) [conside U Blox ZED F9P]
+        |
+
+Observes Satellite Errors (Like CORS Network) [ Base Sation to be Fixed]
+        |
+
+Sends RTCM3 Corrections (By Radio, Internet, Wifi, Bluetooth, Lora)
+        |
+
+Rover / Receiver (veh/ hand held GPS) [ZED F9P]
+        |
+
+Applies corrections
+```
+
+RTCM3 Syntax
+
+```txt
+[PREAMBLE] [LENGTH] [MESSAGE] [CRC]
+```
+
+- Preamble : Every RTCM3 Message  starts with 0xD3 (0xB5, 0x62 for UBX, $ for NMEA)
+
+- Lenth : Number of Bytes of Message Data.
+
+- Message : contains correction data for each satellite
+
+- CRC : Checksum
+
+
+
 
 
 
