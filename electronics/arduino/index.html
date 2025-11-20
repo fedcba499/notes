@@ -333,6 +333,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../computerbasics/ASCII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ASCII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../computerbasics/bash/" class="md-nav__link">
         
   
@@ -907,6 +935,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#delaymicroseconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        delayMicroseconds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#millis" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -922,6 +961,34 @@
     <span class="md-ellipsis">
       
         Serial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serialwrite-vs-serialprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serial.write vs Serial.print
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardwareserial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HardwareSerial
       
     </span>
   </a>
@@ -944,6 +1011,17 @@
     <span class="md-ellipsis">
       
         define
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        interupts
       
     </span>
   </a>
@@ -1760,6 +1838,8 @@ pinMode(pin);       // mode default value is INPUT
 </blockquote>
 <h2 id="delay">delay</h2>
 <p>delay(ms) pauses program for the amount of time as specified in milliseconds. 1000 milliseconds = 1 sencond</p>
+<h2 id="delaymicroseconds">delayMicroseconds</h2>
+<p>delayMicroseconds(us) pauses program for the time specified in microseconds. 1000 microseconds = 1 milli seconds and 10,00,000 microsecond = 1 second. Microseconds are used when we need precise timing. delay function is accurate to millisecond. Microseconds play important role for creating pulse for ultrasonic sensor (10 microsecond), and also in Pulse Width Modultation, where accuracy is critical.</p>
 <h2 id="millis">millis</h2>
 <p>millis() function returns the number of milliseconds since the arduino board began running.</p>
 <blockquote>
@@ -1777,8 +1857,61 @@ random(min, max);
 Serial.print()                  // prints data to serial port with carriage return
 Serial.println()                // prints data to serial port
 Serial.write()                  // 
-Serial.available()
-Serial.read()
+Serial.available()              
+
+// Check if data is waiting, returns int (number of bytes in waiting in receive buffer ie SRAM, Arduino Nano has 64 Bytes capacity, so anything after 64 bytes is discarded (FIFO), First In First Out). If we read memory is cleared.
+
+// 0 = no data
+// &gt; 0 = that many number of bytes are ready to read
+
+Serial.read()                   
+
+// read one byte
+
+// 0 - 255 = the byte that was read
+// -1 = No data available in buffer (buffer empty)
+
+// always check available() before read() to avoid -1
+
+</code></pre>
+<h3 id="serialwrite-vs-serialprint">Serial.write vs Serial.print</h3>
+<p>Serial.write() sends raw binary data (bytes) without any conversion. It is mainly used in GPS. Ex : Ublox ZED F9P, generates binary data in ubx / bin format not ASCII format. Then using Ublox uCenter, we can get more information using this .bin file or .ubx file. write() function to be used with binary sensory data. </p>
+<p>Serial.write() can also be used as relay or bridge, to send exact binary bytes to another micro controller or computer. Read Byte from buffer stack and send exact byte through tx pin.</p>
+<p>Serial.print() converts data to human-readable ASCII text before sending. print() function to be used with ASCII character.</p>
+<h2 id="hardwareserial">HardwareSerial</h2>
+<p>HardwareSerial is a class provided by the Arduino core to interface with microcontroller hardware UART peripherals.</p>
+<pre><code class="language-cpp">// Normally in c++ we nee to write as
+HardwareSerial Serial(0);
+
+// But Arduino does all of that internally, so we only write
+Serial.begin(9600);
+
+// Boards like esp32 have more than 1 UART hardware, so we can create several UART communications.
+
+HardwareSerial Serial(0);       // On first UART Hardware with number 0
+
+HardwareSerial Gps(1);          // on second UART Hardware with number 1
+</code></pre>
+<p>HardwareSerial code is different for different boards like AVR &amp; ESP32.</p>
+<pre><code class="language-cpp">// HardwareSerial.h (AVR)
+
+void begin(unsigned long baud, uint8_t config)      
+
+// default config value is SERIAL_8N1. (8 bit data, no check, 1 stop)
+</code></pre>
+<pre><code class="language-cpp">// HardwareSerial.h (ESP32)
+
+void begin(unsigned long baud,
+            uint32_t config,
+            int rxPin,
+            int txPin,
+            bool invert = flase,
+            unsigned long timeout_ms = 20000,
+            uart_port_t uart = UART_NUM_1);
+
+// so we need to specify atleast baud, config, rxPin and txPin, rest all are default.
+
+// UART0 can be initiated with only baud argument, as rest are default, but for UART1, UART2 minimum 4 arguments are required.
 </code></pre>
 <h2 id="pulsein">pulseIn</h2>
 <pre><code class="language-cpp">pulseIn(pin, value);
@@ -1800,6 +1933,7 @@ pulseIn(pin, value, timeout);   //  timeout default value is 1 second.
 // Modern style (Recommended)
 const int LED_PIN 13
 </code></pre>
+<h2 id="interupts">interupts</h2>
 
 
 

@@ -333,6 +333,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../computerbasics/ASCII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ASCII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../computerbasics/bash/" class="md-nav__link">
         
   
@@ -959,17 +987,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-rtcm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What is RTCM?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#what-is-cors-network" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -996,6 +1013,84 @@
     <span class="md-ellipsis">
       
         What are major technologies used in GPS location?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ublox-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UBlox Formats
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UBlox Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#u-center-software-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U Center Software configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nmea-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NMEA Protocol
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NMEA Protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sentence-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sentence Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubx-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UBX Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rtcm3-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RTCM3 Protocol
       
     </span>
   </a>
@@ -1445,13 +1540,6 @@ Gagan - geo stationary satellite for accuracy ( Satellite based Augumenation Sys
 </blockquote>
 <h2 id="what-is-satelite-bases-augmentation-system-sbas">What is Satelite Bases Augmentation System (SBAS)?</h2>
 <p>SBAS (Satellite-Based Augmentation System) → Uses satellites like GAGAN (India), WAAS (USA), EGNOS (Europe) to send free correction data. It uses geostationary satellite to send corection data.</p>
-<h2 id="what-is-rtcm">What is RTCM?</h2>
-<p>RTCM 3.x Corrections from a Local Base Station → If you have a nearby base station (e.g., ZED-F9P, CORS network), you can send RTCM corrections over UART or Bluetooth for better accuracy. (Both modules can use this). Rtcm support dgnss modules ublox are as under
-- Neo m8p
-- Zed f9p
-- Zed f9r ( includes imu )
-- Neo f9p
-- Neo m9n</p>
 <h2 id="what-is-cors-network">What is CORS Network?</h2>
 <p>CORS stands for Continously Operating Reference Station. Surevey of India operates more than 1500 Station for weather an GPS corrections. Using these corrections we can improve location accuracy. It is transmitted through internet. so we need to add IP address of CORS network to our UCenter software, to do live corrections.</p>
 <blockquote>
@@ -1478,6 +1566,238 @@ better for compact)</li>
 </ul>
 <p><img alt="Carrier Wave Measurement vs Pseudo Random Code" src="../../images/gps_wave.png" /></p>
 <p><em>Carrier Wave Measurement vs Pseudo Random Code</em></p>
+<h2 id="ublox-formats">UBlox Formats</h2>
+<p>UBlox GNSS Receiver Modules can be configured to output multiple formats simultaneously on the same or different ports.</p>
+<p>We can configure each communication port independently to output different protocols, or combination of protocols.</p>
+<ul>
+<li>UART1 : NMEA only (For TinyGPS++ code)</li>
+<li>UART2 : UBX only(for RTK corrections or advanced data)</li>
+<li>USB : NMEA + UBX + RTCM (for configuration/ debugging).</li>
+</ul>
+<p>Default Protocol Settings on Port are as under</p>
+<table>
+<thead>
+<tr>
+<th>Communication Port</th>
+<th>ZED F9P</th>
+<th>NEO M9N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USB</td>
+<td>NMEA, UBX, RTCM3</td>
+<td>NMEA, UBX</td>
+</tr>
+<tr>
+<td>UART1</td>
+<td>NMEA, UBX</td>
+<td>NMEA, UBX</td>
+</tr>
+<tr>
+<td>UART2</td>
+<td>NMEA, UBX</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>UBX</td>
+<td>UBX</td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>UBX</td>
+<td>UBX</td>
+</tr>
+</tbody>
+</table>
+<h3 id="u-center-software-configuration">U Center Software configuration</h3>
+<p>View -&gt; Messages View </p>
+<p>CFG -&gt; PRT (Port Configuration)</p>
+<p>Select Target Port (UART1, UART2, I2C, USB etc)</p>
+<p>Enable Protocols (UBX, NMEA, RTCM3 (if needed for RTK))</p>
+<blockquote>
+<p>TinyGPS++ library can only read and understand NMEA statements.</p>
+</blockquote>
+<h2 id="nmea-protocol">NMEA Protocol</h2>
+<p>NMEA Protocol developed by National Marine Electronics Association for Commninication. It uses ASCII text. </p>
+<pre><code class="language-NMEA">$GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47&lt;CR&gt;&lt;LF&gt;
+</code></pre>
+<ul>
+<li>$ : Start Character</li>
+<li>GP : (GP - GPS, GL -  Glonass, GN - Multiple Sytems etc)</li>
+<li>GGA : Sentence type</li>
+<li>23125, 1231 : comma seperated data </li>
+<li>*47 : checksum (asterisk + 2 HEX digits)</li>
+<li><CR><LF> : End (carriage return + Line feed)</li>
+</ul>
+<h3 id="sentence-type">Sentence Type</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Full Name</th>
+<th>Contains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GGA</td>
+<td>Global Position System Fix Data</td>
+<td>Position, altitude, time, satellites</td>
+</tr>
+<tr>
+<td>RMC</td>
+<td>Recommended Minimum Navigation</td>
+<td>Position, speed, date, time</td>
+</tr>
+<tr>
+<td>GSA</td>
+<td>GPS DOP and Active Satellites</td>
+<td>Satellite IDs, accuracy metrics</td>
+</tr>
+<tr>
+<td>GSV</td>
+<td>GPS Satellies in View</td>
+<td>Satellite Details, signal Strength</td>
+</tr>
+<tr>
+<td>VTG</td>
+<td>Track Made Good and Ground Speed</td>
+<td>Speed Heading</td>
+</tr>
+<tr>
+<td>GLL</td>
+<td>Geographic Position</td>
+<td>Latitude and Longitude Only</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>TinyGPS++ Library does all tasks, such as parsing, checksum validation, data conversion and returns data like latitude, longitude, satelite fix etc.</p>
+</blockquote>
+<h2 id="ubx-protocol">UBX Protocol</h2>
+<p>UBX is U Blox proprietary binary protocol. Unlike NMEA (text), UBX is Binary data.</p>
+<pre><code class="language-UBX">NMEA: $GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47     (70+ bytes of ASCII text)
+
+UBX:  0xB5 0x62 0x01 0x07 ... (20-30 bytes of binary data)
+
+[SYNC1] [SYNC2] [CLASS] [ID] [LENGH] [PAYLOAD] [CHECKSUM]
+</code></pre>
+<p>Every UBX messages starts with 2 bytes
+- 0xB5 (181 decimal) - SYNC1 Char
+- 0x62 (98 decimal) - SYNC2 Char
+- It is similar to NMEA $</p>
+<p>UBX Messages are organized by CLASS and ID</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>HEX</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NAV</td>
+<td>01</td>
+<td>Navigation (Position, velocity)</td>
+</tr>
+<tr>
+<td>RXM</td>
+<td>02</td>
+<td>Receiver (satellite info)</td>
+</tr>
+<tr>
+<td>INF</td>
+<td>04</td>
+<td>Information</td>
+</tr>
+<tr>
+<td>ACK</td>
+<td>05</td>
+<td>Acknowledge</td>
+</tr>
+<tr>
+<td>CFG</td>
+<td>06</td>
+<td>Configuration</td>
+</tr>
+<tr>
+<td>Mon</td>
+<td>0A</td>
+<td>Monitoring (system status)</td>
+</tr>
+<tr>
+<td>TIM</td>
+<td>0D</td>
+<td>Timing</td>
+</tr>
+<tr>
+<td>MGA</td>
+<td>13</td>
+<td>Multiple GNSS Assistance</td>
+</tr>
+<tr>
+<td>LOG</td>
+<td>21</td>
+<td>Logging</td>
+</tr>
+</tbody>
+</table>
+<p>For each CLASS there are several ID. Consider NAV CLASS (0x01)</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>HEX</th>
+<th>Message Name</th>
+<th>Contains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POSLLH</td>
+<td>02</td>
+<td>Position (Lat, Lon, Height)</td>
+<td>Lat, Lon, Alt</td>
+</tr>
+<tr>
+<td>STATUS</td>
+<td>03</td>
+<td>Receiver Status</td>
+<td>Fix Type, flags</td>
+</tr>
+<tr>
+<td>PVT</td>
+<td>07</td>
+<td>Position, Velocity, time</td>
+<td>Everything (most used)</td>
+</tr>
+<tr>
+<td>TIMEUTC</td>
+<td>21</td>
+<td>UTC TIme</td>
+<td>Date and time</td>
+</tr>
+<tr>
+<td>SVINFO</td>
+<td>30</td>
+<td>Satellite Info</td>
+<td>Signal Strength per satellite</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Sparkfun Library (Sparkfun_u-blox_GNSS_Arduino_Lirary_V3.h) does all the heavy lifting and returns latitude, latitude and all. </p>
+</blockquote>
+<h2 id="rtcm3-protocol">RTCM3 Protocol</h2>
+<p>RTCM 3.x Corrections from a Local Base Station → If you have a nearby base station (e.g., ZED-F9P, CORS network), you can send RTCM corrections over UART or Bluetooth for better accuracy. (Both modules can use this). Rtcm support dgnss modules ublox are as under
+- Neo m8p
+- Zed f9p
+- Zed f9r ( includes imu )
+- Neo f9p
+- Neo m9n</p>
 
 
 
