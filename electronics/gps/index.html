@@ -1792,12 +1792,38 @@ UBX:  0xB5 0x62 0x01 0x07 ... (20-30 bytes of binary data)
 <p>Sparkfun Library (Sparkfun_u-blox_GNSS_Arduino_Lirary_V3.h) does all the heavy lifting and returns latitude, latitude and all. </p>
 </blockquote>
 <h2 id="rtcm3-protocol">RTCM3 Protocol</h2>
-<p>RTCM 3.x Corrections from a Local Base Station → If you have a nearby base station (e.g., ZED-F9P, CORS network), you can send RTCM corrections over UART or Bluetooth for better accuracy. (Both modules can use this). Rtcm support dgnss modules ublox are as under
-- Neo m8p
-- Zed f9p
-- Zed f9r ( includes imu )
-- Neo f9p
-- Neo m9n</p>
+<p>RTCM 3 stands for Radio Technical Commision for Maritime Serivices, Version 3. It is binary protocol (similar to UBX Protocol) used for High Precision GPS Corrections.</p>
+<pre><code class="language-txt">Base Station (knows exact position) [conside U Blox ZED F9P]
+        |
+
+Observes Satellite Errors (Like CORS Network) [ Base Sation to be Fixed]
+        |
+
+Sends RTCM3 Corrections (By Radio, Internet, Wifi, Bluetooth, Lora)
+        |
+
+Rover / Receiver (veh/ hand held GPS) [ZED F9P]
+        |
+
+Applies corrections
+</code></pre>
+<p>RTCM3 Syntax</p>
+<pre><code class="language-txt">[PREAMBLE] [LENGTH] [MESSAGE] [CRC]
+</code></pre>
+<ul>
+<li>
+<p>Preamble : Every RTCM3 Message  starts with 0xD3 (0xB5, 0x62 for UBX, $ for NMEA)</p>
+</li>
+<li>
+<p>Lenth : Number of Bytes of Message Data.</p>
+</li>
+<li>
+<p>Message : contains correction data for each satellite</p>
+</li>
+<li>
+<p>CRC : Checksum</p>
+</li>
+</ul>
 
 
 
