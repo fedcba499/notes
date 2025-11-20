@@ -1961,7 +1961,11 @@ SD.open(&quot;test.txt&quot;, FILE_WRITE)     // write to file
 SD.open(&quot;test.txt&quot;)                 // read file
 </code></pre>
 <h2 id="file-library">File Library</h2>
+<pre><code class="language-cpp">File myTextFile = SD.open(&quot;mytext.txt&quot;);
+</code></pre>
 <h2 id="interupts">interupts</h2>
+<p>interupts() listen for certain signal, if it receives signal, it stops whatever process in progress, and does assigned task to interupts.</p>
+<p>used to do critical tasks on receiving signal.</p>
 
 
 
