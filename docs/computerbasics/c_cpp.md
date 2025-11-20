@@ -74,15 +74,26 @@ Nested namespace also exists, such as alpha::beta::x
 
 ## pointer
 
+pointer stores memory address of variable
+```cpp
+int *age = 10;          // pointer is decalred using astrisk *
+```
+
 ## reference
+
+reference is used for **alias**, we need to create another name for variable reference is used.
+
+```cpp
+int x = 10
+int &ref = x    // & is used to declare reference
+```
 
 ## access specifier
 
-Access Specifier are keywords that controls the visibility and accessibility of class members(variable and methods) to different part of program. Encapsulation.
-
-- public : can be accessed from anywhere, inside and outside of class.
-- private : can be accessed from class only. default is private.
-- protected : can be accessed from class and by derived (child) class only.
+Access Specifier are keywords that controls the visibility and accessibility of class members(variable and methods) to different part of program. ```Encapsulation```.
+- **public** : can be accessed from anywhere, inside and outside of class.
+- **private** : can be accessed from class only. default is private.
+- **protected** : can be accessed from class and by derived (child) class only.
 
 ## include
 
@@ -111,10 +122,75 @@ uint64_t  // unsigned, 64 bits
 ```
 
 ## struct
+struct is short for structure. It is grouping of several data types and functions. It is similar to class, but with default access as **Public**. Struct can be used as an array with various datatypes. 
+
+```cpp
+struct myStruct()
+{
+    int age = 10;
+    string name = kumar;
+
+    void getName()
+    {
+        cout << name;
+    }
+}
+
+// initiate 
+myStruct student;
+
+cout << student.age;
+```
 
 ## enum
+enum is short for enumeration (make a list of / enumerate). It is assigning Interger name. It improves code readability.
+
+```cpp
+enum dayOfWeek() 
+{
+    MONDAY,
+    TUESDAY, 
+    WEDNESDAY,
+    THURSDAY, 
+    FRIDAY,
+    SATURDAY,
+    SUNDAY
+}
+
+// if i print monday it will show as int 0
+cout<< dayOfWeek::MONDAY        // 0
+```
+
+We can relate to Arduino constants like
+
+```cpp
+enum value()
+{
+    LOW,                // 0
+    HIGH                //1
+}
+
+enum mode()
+{
+    INPUT,              // 0
+    OUTPUT,             // 1
+    INPUT_PULLUP        // 2
+}
+```
 
 ## typedef
+
+typedef is used for alias. 
+
+> similar to **as** in python
+
+```cpp
+typedef unsigned long ulong
+typedef unsigned int uint
+```
+
+## define
+define is used for **alias**, but direct text replacement only without type safety.
 
 ## Singleton Pattern
 
@@ -145,4 +221,15 @@ File myFile = SD.open("test.txt")
 ```     
 
 File Class constructor method is Private, it can be accessed by SD.open() function.
+
+> Used when it requires complex object creation, need validation.
+
+## Wrapper/ Facade Pattern
+Simple interface for complex system. 
+
+Ex : SPI.h is low level library, designed for dealing with Serial Peripheral Communicaiton. It is difficult to use SPI.h, so SD.h class is created to simplify certain SPI.h tasks releated to SD card Handling, like open file, read file , write to file etc.
+
+SD class acts as Wrapper or Facade to Simplify usage of SPI class.
+
+
 

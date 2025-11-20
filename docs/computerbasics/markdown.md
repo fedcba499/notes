@@ -11,6 +11,7 @@
 | *                             | Italic                                        |
 | ```python                     | Python code                                   |
 | ```shell                      | Shell Code                                    |
+| ```some text```               | Highlight Text in Grey                        |
 | \[link](https://google.com)   | link                                          |
 | \[anchor](#anchor-navigation) | With in Page Navigation                       |
 | \!\[img.jpg](path/to/img)     | Images                                        |

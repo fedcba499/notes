@@ -342,7 +342,14 @@ SD.open("test.txt")                 // read file
 ```
 
 ## File Library
+```cpp
+File myTextFile = SD.open("mytext.txt");
+```
+
 ## interupts
+interupts() listen for certain signal, if it receives signal, it stops whatever process in progress, and does assigned task to interupts.
+
+used to do critical tasks on receiving signal.
  
 
 
