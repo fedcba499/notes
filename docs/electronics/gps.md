@@ -169,11 +169,35 @@ RTCM3 Syntax
 
 - CRC : Checksum
 
+## TinyGPS++ Library
+
+```cpp
+// Creating Object of TinyGPS++
+TinyGPSPlus gps;
+
+gps.encode();           
+// Feeds that single character of NMEA statements into TinyGPS++ Parser.
+
+// Returns true if a complete sentence received, after doing checksum is valid.
+
+gps.location.isValid();
+// Returns true, if GPS has a valid position fix
 
 
+gps.location.isUpdated();       
+// Returns true if location changed since last check, useful to avoid processing the same data repeatedly.
 
+gps.charsProcessed();
+// Total characters received
 
+```
 
+### Fix Quality Indicator
+- 0 : No Fix 
+- 1 : GPS Fix
+- 2 : DGPS Fix (Differential GPS more accurate)
+- 4 : RTK Fixed (Real Time Kinematics) [Centimeter level accuracy] interger ambiguities resolved.
+- 5 : RTK Float (ambiguities not fully resolved)
 
 
 

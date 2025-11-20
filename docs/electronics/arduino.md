@@ -333,7 +333,15 @@ pulseIn() function measures the duration of a pulse on a digital pin. It waits f
 // Modern style (Recommended)
 const int LED_PIN 13
 ```
+## SD Library
 
+```cpp
+SD.begin(chipSelect);               // check if SD card mounted or not
+SD.open("test.txt", FILE_WRITE)     // write to file
+SD.open("test.txt")                 // read file
+```
+
+## File Library
 ## interupts
  
 

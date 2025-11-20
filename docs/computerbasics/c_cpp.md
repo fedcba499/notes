@@ -116,7 +116,33 @@ uint64_t  // unsigned, 64 bits
 
 ## typedef
 
+## Singleton Pattern
 
+Singleton meaning "There can be only one". It ensures only one object / Instance of a class exists in entire program.
 
+In all Microelectronics ther can be only one
+- Wire (I2C) Bus
+- SPI
+- SD card
 
+Only One can exists. so it be better to have Single ton Class.
+
+## Factory Pattern
+Factory Pattern is a Design Pattern (Like Singleton Pattern) where we have a special "factory" / class that creates objects for us, instead of using constructors directly.
+
+```cpp
+// without factory / seperate class - direct construction
+
+TinyGPSPlus gps;        
+
+// we call constructor method of TinyGPSPlus class, it creates object of TinyGPSPlus Class.
+
+// With factory - function creates it
+
+File myFile = SD.open("test.txt")       
+
+// SD.open() function create a object or instance of File class for us.
+```     
+
+File Class constructor method is Private, it can be accessed by SD.open() function.
 
