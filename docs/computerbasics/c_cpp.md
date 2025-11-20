@@ -74,6 +74,8 @@ Nested namespace also exists, such as alpha::beta::x
 
 ## pointer
 
+## reference
+
 ## access specifier
 
 Access Specifier are keywords that controls the visibility and accessibility of class members(variable and methods) to different part of program. Encapsulation.
@@ -89,4 +91,32 @@ Access Specifier are keywords that controls the visibility and accessibility of 
 
 #include "Arduino.h"        // searches in current directory first. useful for our own header files.     
 ```
+
+## Data Types
+
+Exact Width Integer Type
+
+```cpp
+int8_t    // signed, 8 bits  (-128 to 127)
+uint8_t   // unsigned, 8 bits (0 to 255)
+
+int16_t   // signed, 16 bits (-32,768 to 32,767)
+uint16_t  // unsigned, 16 bits (0 to 65,535)
+
+int32_t   // signed, 32 bits
+uint32_t  // unsigned, 32 bits
+
+int64_t   // signed, 64 bits
+uint64_t  // unsigned, 64 bits
+```
+
+## struct
+
+## enum
+
+## typedef
+
+
+
+
 

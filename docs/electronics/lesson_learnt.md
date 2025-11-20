@@ -6,6 +6,8 @@
 | Security    | Arm Trust Zone                                            | Basic ( difficult to setup )  |
 | PIO         | Suppports Programmable IO                                 | no support                    |
 
+- Use Arduino than micropython, because arduino.h is easier to use, with pinMode, digitalRead, and digitalWrite function, which makes it very easier to use.
+
 - Use Raspberry Pi Pico. It is designed for maker by maker. Its focus on easy to use Microcontroller. It supports Micropython Natively.
 
 - Limit MCU to Micropython. so that it is eaiser to build. limit to esp8266 ( due to its 2mm pin pitch) and ESP32 Varients.

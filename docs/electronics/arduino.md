@@ -218,6 +218,9 @@ Pin is still outputting digital pulses, just very quickly. only certain digital 
 ## delay
 delay(ms) pauses program for the amount of time as specified in milliseconds. 1000 milliseconds = 1 sencond
 
+## delayMicroseconds
+delayMicroseconds(us) pauses program for the time specified in microseconds. 1000 microseconds = 1 milli seconds and 10,00,000 microsecond = 1 second. Microseconds are used when we need precise timing. delay function is accurate to millisecond. Microseconds play important role for creating pulse for ultrasonic sensor (10 microsecond), and also in Pulse Width Modultation, where accuracy is critical.
+
 ## millis
 millis() function returns the number of milliseconds since the arduino board began running.
 > number will overflow after 9 hours.ie 3,24,00,000 milliseconds. 
@@ -237,8 +240,72 @@ Serial.begin(rate)              // opens serial port and set the baud rate for s
 Serial.print()                  // prints data to serial port with carriage return
 Serial.println()                // prints data to serial port
 Serial.write()                  // 
-Serial.available()
-Serial.read()
+Serial.available()              
+
+// Check if data is waiting, returns int (number of bytes in waiting in receive buffer ie SRAM, Arduino Nano has 64 Bytes capacity, so anything after 64 bytes is discarded (FIFO), First In First Out). If we read memory is cleared.
+
+// 0 = no data
+// > 0 = that many number of bytes are ready to read
+
+Serial.read()                   
+
+// read one byte
+
+// 0 - 255 = the byte that was read
+// -1 = No data available in buffer (buffer empty)
+
+// always check available() before read() to avoid -1
+
+```
+### Serial.write vs Serial.print
+
+Serial.write() sends raw binary data (bytes) without any conversion. It is mainly used in GPS. Ex : Ublox ZED F9P, generates binary data in ubx / bin format not ASCII format. Then using Ublox uCenter, we can get more information using this .bin file or .ubx file. write() function to be used with binary sensory data. 
+
+Serial.write() can also be used as relay or bridge, to send exact binary bytes to another micro controller or computer. Read Byte from buffer stack and send exact byte through tx pin.
+
+Serial.print() converts data to human-readable ASCII text before sending. print() function to be used with ASCII character.
+
+## HardwareSerial
+HardwareSerial is a class provided by the Arduino core to interface with microcontroller hardware UART peripherals.
+
+```cpp
+// Normally in c++ we nee to write as
+HardwareSerial Serial(0);
+
+// But Arduino does all of that internally, so we only write
+Serial.begin(9600);
+
+// Boards like esp32 have more than 1 UART hardware, so we can create several UART communications.
+
+HardwareSerial Serial(0);       // On first UART Hardware with number 0
+
+HardwareSerial Gps(1);          // on second UART Hardware with number 1
+```
+
+HardwareSerial code is different for different boards like AVR & ESP32.
+
+```cpp
+// HardwareSerial.h (AVR)
+
+void begin(unsigned long baud, uint8_t config)      
+
+// default config value is SERIAL_8N1. (8 bit data, no check, 1 stop)
+```
+
+```cpp
+// HardwareSerial.h (ESP32)
+
+void begin(unsigned long baud,
+            uint32_t config,
+            int rxPin,
+            int txPin,
+            bool invert = flase,
+            unsigned long timeout_ms = 20000,
+            uart_port_t uart = UART_NUM_1);
+
+// so we need to specify atleast baud, config, rxPin and txPin, rest all are default.
+
+// UART0 can be initiated with only baud argument, as rest are default, but for UART1, UART2 minimum 4 arguments are required.
 ```
 
 ## pulseIn
@@ -267,8 +334,7 @@ pulseIn() function measures the duration of a pulse on a digital pin. It waits f
 const int LED_PIN 13
 ```
 
-
-
-
+## interupts
+ 
 
 
