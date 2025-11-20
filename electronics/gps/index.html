@@ -1097,6 +1097,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tinygps-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TinyGPS++ Library
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TinyGPS++ Library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fix-quality-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix Quality Indicator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1823,6 +1851,34 @@ Applies corrections
 <li>
 <p>CRC : Checksum</p>
 </li>
+</ul>
+<h2 id="tinygps-library">TinyGPS++ Library</h2>
+<pre><code class="language-cpp">// Creating Object of TinyGPS++
+TinyGPSPlus gps;
+
+gps.encode();           
+// Feeds that single character of NMEA statements into TinyGPS++ Parser.
+
+// Returns true if a complete sentence received, after doing checksum is valid.
+
+gps.location.isValid();
+// Returns true, if GPS has a valid position fix
+
+
+gps.location.isUpdated();       
+// Returns true if location changed since last check, useful to avoid processing the same data repeatedly.
+
+gps.charsProcessed();
+// Total characters received
+
+</code></pre>
+<h3 id="fix-quality-indicator">Fix Quality Indicator</h3>
+<ul>
+<li>0 : No Fix </li>
+<li>1 : GPS Fix</li>
+<li>2 : DGPS Fix (Differential GPS more accurate)</li>
+<li>4 : RTK Fixed (Real Time Kinematics) [Centimeter level accuracy] interger ambiguities resolved.</li>
+<li>5 : RTK Float (ambiguities not fully resolved)</li>
 </ul>
 
 

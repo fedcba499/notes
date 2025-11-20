@@ -554,6 +554,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#singleton-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Singleton Pattern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#factory-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factory Pattern
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1580,6 +1602,28 @@ uint64_t  // unsigned, 64 bits
 <h2 id="struct">struct</h2>
 <h2 id="enum">enum</h2>
 <h2 id="typedef">typedef</h2>
+<h2 id="singleton-pattern">Singleton Pattern</h2>
+<p>Singleton meaning "There can be only one". It ensures only one object / Instance of a class exists in entire program.</p>
+<p>In all Microelectronics ther can be only one
+- Wire (I2C) Bus
+- SPI
+- SD card</p>
+<p>Only One can exists. so it be better to have Single ton Class.</p>
+<h2 id="factory-pattern">Factory Pattern</h2>
+<p>Factory Pattern is a Design Pattern (Like Singleton Pattern) where we have a special "factory" / class that creates objects for us, instead of using constructors directly.</p>
+<pre><code class="language-cpp">// without factory / seperate class - direct construction
+
+TinyGPSPlus gps;        
+
+// we call constructor method of TinyGPSPlus class, it creates object of TinyGPSPlus Class.
+
+// With factory - function creates it
+
+File myFile = SD.open(&quot;test.txt&quot;)       
+
+// SD.open() function create a object or instance of File class for us.
+</code></pre>
+<p>File Class constructor method is Private, it can be accessed by SD.open() function.</p>
 
 
 

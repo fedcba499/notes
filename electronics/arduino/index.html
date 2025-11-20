@@ -1018,6 +1018,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sd-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SD Library
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Library
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#interupts" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1933,6 +1955,12 @@ pulseIn(pin, value, timeout);   //  timeout default value is 1 second.
 // Modern style (Recommended)
 const int LED_PIN 13
 </code></pre>
+<h2 id="sd-library">SD Library</h2>
+<pre><code class="language-cpp">SD.begin(chipSelect);               // check if SD card mounted or not
+SD.open(&quot;test.txt&quot;, FILE_WRITE)     // write to file
+SD.open(&quot;test.txt&quot;)                 // read file
+</code></pre>
+<h2 id="file-library">File Library</h2>
 <h2 id="interupts">interupts</h2>
 
 
