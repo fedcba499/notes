@@ -1023,6 +1023,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tips-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips &amp; Tricks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flight-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flight modes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1662,6 +1684,20 @@ CADDXFPV brand </p>
 <p>Quadkart</p>
 <p>micropack pcb bangalore</p>
 <p>indian drone parts</p>
+<h2 id="tips-tricks">Tips &amp; Tricks</h2>
+<p>Pitch and Roll stick should auto center, similarly throttle stick should never auto centered.</p>
+<p><strong>Roll / Aileron</strong>  Moves your drone left or right in the air, literally “rolling” your drone.</p>
+<p><strong>Pitch / Elevator</strong>    Tilts your drone forward or backward.</p>
+<p><strong>Yaw / Rudder</strong>    Rotates your drone clockwise or counterclockwise, allowing you to make circles or patterns in the air.</p>
+<p><strong>Throttle / Throttle</strong> Controls the amount of power sent to your drone, which makes the drone go faster or slower.</p>
+<p>Reverse throttle.   Menu -&gt; Settings -&gt; Throttle-&gt; Reverse &amp; Similarly do pitch reverse
+Gear.   Menu -&gt; Settings -&gt; Aux -&gt; Gear.</p>
+<h2 id="flight-modes">Flight modes</h2>
+<p><strong>Heli mode</strong> - 3 flights mode are possible, To use this set Auxilary Channel 5 to Gear - &gt; Pitch Curve to 0, 50, 100</p>
+<p><strong>Acro Mode</strong> - 6 Flight Mode are Possible. Set Auxilary Channel 5 to Gear, Set Flight mode channel to 6 in Mission Planner, Use Mix 1, 2, 3 to Program Mix Switch. Mix Switch has 3 Positions, these are Normal, ID 1 and ID 2. Uprate is value when Gear switch is up, Downrate is value when Gear Switch is Down. Master channel is Gyr, Slave channel is flr.</p>
+<p>Pixhawk main pins and axillary pins doesn't have power. We must supply power us in ESC. I one of the pins get power rest all pins get power they are interconnected.
+To assign any task to any pins (ie main pins 1-8 : RC 1-8 and auxiliary pins 1-6 : RC 9-14) go to configuration user params assign specific task to specific pin. 
+If you assigned RCIN8 to RC9 which means Radio controller in pin 8 assigned to Auckland pin 1.</p>
 
 
 
