@@ -138,3 +138,32 @@ micropack pcb bangalore
 
 indian drone parts
 
+## Tips & Tricks
+
+Pitch and Roll stick should auto center, similarly throttle stick should never auto centered.
+
+**Roll / Aileron**	Moves your drone left or right in the air, literally “rolling” your drone.
+
+**Pitch / Elevator**	Tilts your drone forward or backward.
+
+**Yaw / Rudder**	Rotates your drone clockwise or counterclockwise, allowing you to make circles or patterns in the air.
+
+**Throttle / Throttle**	Controls the amount of power sent to your drone, which makes the drone go faster or slower.
+
+
+Reverse throttle.	Menu -> Settings -> Throttle-> Reverse & Similarly do pitch reverse
+Gear.	Menu -> Settings -> Aux -> Gear.
+
+## Flight modes 
+
+**Heli mode** - 3 flights mode are possible, To use this set Auxilary Channel 5 to Gear - > Pitch Curve to 0, 50, 100
+
+**Acro Mode** - 6 Flight Mode are Possible. Set Auxilary Channel 5 to Gear, Set Flight mode channel to 6 in Mission Planner, Use Mix 1, 2, 3 to Program Mix Switch. Mix Switch has 3 Positions, these are Normal, ID 1 and ID 2. Uprate is value when Gear switch is up, Downrate is value when Gear Switch is Down. Master channel is Gyr, Slave channel is flr.
+
+Pixhawk main pins and axillary pins doesn't have power. We must supply power us in ESC. I one of the pins get power rest all pins get power they are interconnected.
+To assign any task to any pins (ie main pins 1-8 : RC 1-8 and auxiliary pins 1-6 : RC 9-14) go to configuration user params assign specific task to specific pin. 
+If you assigned RCIN8 to RC9 which means Radio controller in pin 8 assigned to Auckland pin 1.
+
+
+
+
