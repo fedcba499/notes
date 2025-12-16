@@ -1063,22 +1063,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#power-conversion-5v-33v" class="md-nav__link">
+  <a href="#linear-voltage-regulator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Power Conversion 5v / 3.3v
+        Linear Voltage Regulator
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Power Conversion 5v / 3.3v">
+    <nav class="md-nav" aria-label="Linear Voltage Regulator">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#buck-converter" class="md-nav__link">
+  <a href="#1-gen-1995-2000-bi-polar-technology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Buck Converter
+        1 Gen (1995 - 2000) : Bi-Polar Technology
       
     </span>
   </a>
@@ -1086,10 +1086,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#boost-converter" class="md-nav__link">
+  <a href="#2-gen-2000-2010-cmos-revoltution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Boost Converter
+        2 Gen (2000 - 2010) CMOS Revoltution
       
     </span>
   </a>
@@ -1097,10 +1097,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buck-boost-converter" class="md-nav__link">
+  <a href="#3-gen-2010-present-performance-boost" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Buck Boost Converter
+        3 Gen (2010 - Present) Performance boost
       
     </span>
   </a>
@@ -1108,10 +1108,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#advanced" class="md-nav__link">
+  <a href="#comparision-table-for-esp32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced
+        Comparision Table for ESP32
       
     </span>
   </a>
@@ -1317,6 +1317,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../kicad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kicad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../lesson_learnt/" class="md-nav__link">
         
   
@@ -1325,6 +1353,34 @@
     
   
     Lesson learnt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../micro_controller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Micro controller
   
 
     
@@ -1809,40 +1865,158 @@
 <p>ESD Stands for Electro Static Discharge. Sudden spark of static electricity. We dont feel much damage, but microchips can be destroyed instantly. Place a part like LESD5D5.0CT1G or SMF5.0A across VBUS-to-GND. Additonally use it for D+, D-.</p>
 <h2 id="what-is-diode">What is Diode?</h2>
 <p>Diode is one way valve. ex - 1N5819HW </p>
-<h2 id="power-conversion-5v-33v">Power Conversion 5v / 3.3v</h2>
-<h3 id="buck-converter">Buck Converter</h3>
-<ul>
-<li>AMS1117 3.3 / 5 LDO (Low Drop Out). It is good to to drop few volts by Advanced Monolithic Systems.AMS1117 is a lower cost clone of LM1117 of Texas Instruments. 800mA power output</li>
-<li>LM1117 is Low Drop Out Linear Regulator by Texas Instruments</li>
-<li>LM7805, LM7809, LM7812, LM7833 (Linear Regulator by ST Electronics)</li>
-<li>LD1117v33 input range from 4.3v to 15v</li>
-<li>LM2596 Buck Converter Adjustable by Texas Instruments. It can drop more than 5 volts. also available in Fixed 3.3V, 5V &amp; 12V.</li>
-<li>MP1584 Buck Converter Adjustable</li>
-<li>MP2307 Buck Converter (MINI-360) is modern version of LM2596 buck convertor.<blockquote>
-<p>MP Series IC are made by Monolithic Power System (MPS) based in US.</p>
+<h2 id="linear-voltage-regulator">Linear Voltage Regulator</h2>
+<h3 id="1-gen-1995-2000-bi-polar-technology">1 Gen (1995 - 2000) : Bi-Polar Technology</h3>
+<p>LM1117 Famliy, LM317, LM2596, 78xx Series. In 1995 Texas Instruments released LM1117 IC. With General Characteristics as under
+- Low Dropout Regulator
+- 800 mA Output Current
+- 1.2 V Dropout Voltage
+- Input Voltage upto 15 V
+- Quienscent current (Iq) : 5mA / 5000uA
+- Dropout Voltage : 1.2 V, 1200 mV</p>
+<p>Various Companies made equivalent IC, such as
+- AMS1117 by Advanced Monolithic Systems
+- LD1117 by STMicroelectronics
+- NCP1117 by ON Semi</p>
+<p>Cons
+- The Regulator stops working when VIN drops below VOUT + 1.2V. For 3.3 V VOUT we need minimum 3.3 V + 1.2 V = 4.5 V Minimum VIN. Hence not recommended for LiPo or Li-ion battery (max voltage is 4.2 V)
+- High Quiescent Current (5mA). Burns 5mA continously, even MCU is sleeping.
+- High Heat Disipation.
+- Output Noise - 200uVrms</p>
+<p>Pros
+- Excellent for USB Powered devices (5 V). 
+- Extreamly Cheap</p>
+<h3 id="2-gen-2000-2010-cmos-revoltution">2 Gen (2000 - 2010) CMOS Revoltution</h3>
+<p>XC6206, MCP1700, MP1584, MO2307 
+- Low Quienscent current (Iq) : 1uA
+- Dropout Voltage : 250mV
+- Output Current : 200 mA
+- Battery Range : 3.25 V to 6 V</p>
+<h3 id="3-gen-2010-present-performance-boost">3 Gen (2010 - Present) Performance boost</h3>
+<p>AP2112K, RT9013, TPS7A0233, MAX38903. Enable Pin.
+- Quienscent current (Iq) : 55 uA
+- Dropout Voltage : 250mV
+- Output Current : 600 mA
+- Output Noise : 50 uVrms
+- Battery Range : 3.25 V to 6 V</p>
+<h3 id="comparision-table-for-esp32">Comparision Table for ESP32</h3>
+<table>
+<thead>
+<tr>
+<th>LDO Model</th>
+<th>Company</th>
+<th>Output</th>
+<th>Iq</th>
+<th>Drop V</th>
+<th>Examples</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RT9080</td>
+<td>Richtek</td>
+<td>600 mA</td>
+<td>2 uA</td>
+<td>100 mV</td>
+<td>Sparkfun ESP32 C3, C6, S3</td>
+<td>Dual Rail</td>
+</tr>
+<tr>
+<td>MIC5528</td>
+<td>Microchip</td>
+<td>500 mA</td>
+<td>55 uA</td>
+<td>275 mV</td>
+<td>Adafruit Feather ESP32-S3</td>
+<td>Widely Used</td>
+</tr>
+<tr>
+<td>AP2127K</td>
+<td>Diodes Inc</td>
+<td>1 A</td>
+<td>55 uA</td>
+<td>280 mV</td>
+<td>-</td>
+<td>High Current</td>
+</tr>
+<tr>
+<td>MAX38903</td>
+<td>Analog Devices</td>
+<td>300 mA</td>
+<td>5.5 uA</td>
+<td>140mV</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>TLV75533</td>
+<td>Texas Instruments</td>
+<td>500 mA</td>
+<td>19 uA</td>
+<td>305 mV</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>XC6220B</td>
+<td>Torex</td>
+<td>1 A</td>
+<td>80 uA</td>
+<td>250 mV</td>
+<td>Xiao C3</td>
+<td>High Current</td>
+</tr>
+<tr>
+<td>RT9013</td>
+<td>Richtek</td>
+<td>500 mA</td>
+<td>20 uA</td>
+<td>240 mV</td>
+<td>-</td>
+<td>Popular</td>
+</tr>
+<tr>
+<td>MIC5504</td>
+<td>Microchip</td>
+<td>300 mA</td>
+<td>38 uA</td>
+<td>90 mV</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ME6211</td>
+<td>Microne/ Nanjing</td>
+<td>300 mA</td>
+<td>40 uA</td>
+<td>100 mV</td>
+<td>C3 Super Mini</td>
+<td>Cheap</td>
+</tr>
+<tr>
+<td>XC6206P</td>
+<td>Torex</td>
+<td>200 mA</td>
+<td>1 uA</td>
+<td>250 mV</td>
+<td>-</td>
+<td>Maximum Bty Life</td>
+</tr>
+<tr>
+<td>MCP1700</td>
+<td>Microchip</td>
+<td>250mA</td>
+<td>2 uA</td>
+<td>625 mV</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Chienese Dev kit maker like Espressif, seeedstudio, drobot, waveshare, etc uses chinese Voltage regulator like ME6211 (ESP32 C3 Super Mini), SGM2212 (ESP32 C3 Devkit C-02) etc.</p>
 </blockquote>
-</li>
-<li>XL4005 Buck Converter Adjustable (For Heavy Loads. More than 2 Ampere)</li>
-</ul>
-<h3 id="boost-converter">Boost Converter</h3>
-<ul>
-<li>MT3608</li>
-<li>XL6009 <blockquote>
-<p>XL Series ICs, buck or boost converters are by XLSemi ( Chinese Company).
-</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="buck-boost-converter">Buck Boost Converter</h3>
-<ul>
-<li>XL6019</li>
-</ul>
-<h3 id="advanced">Advanced</h3>
-<ul>
-<li>RT9080 Series LDO IC made by Richtek Technology Corportation is a Taiwan based company. 600 mA Power Output.</li>
-<li>AP2112 Series LDO IC made by Diodes Incorporated is a US Company.</li>
-<li>XC6222 series LDO IC made by Torex Semiconductor Ltd is a Japanese company.</li>
-</ul>
 <h2 id="transistor">Transistor</h2>
 <p>Transistor are like switches or amplifiers (if we pass small current or voltage, it will let large current flow through it.). There are mainly 2 types of transistor.</p>
 <h3 id="bjt">BJT</h3>
