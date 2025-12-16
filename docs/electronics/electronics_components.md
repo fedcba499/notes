@@ -83,34 +83,66 @@ ESD Stands for Electro Static Discharge. Sudden spark of static electricity. We 
 ## What is Diode?
 Diode is one way valve. ex - 1N5819HW 
 
-## Power Conversion 5v / 3.3v
+## Linear Voltage Regulator 
 
-### Buck Converter
+### 1 Gen (1995 - 2000) : Bi-Polar Technology
 
-- AMS1117 3.3 / 5 LDO (Low Drop Out). It is good to to drop few volts by Advanced Monolithic Systems.AMS1117 is a lower cost clone of LM1117 of Texas Instruments. 800mA power output
-- LM1117 is Low Drop Out Linear Regulator by Texas Instruments
-- LM7805, LM7809, LM7812, LM7833 (Linear Regulator by ST Electronics)
-- LD1117v33 input range from 4.3v to 15v
-- LM2596 Buck Converter Adjustable by Texas Instruments. It can drop more than 5 volts. also available in Fixed 3.3V, 5V & 12V.
-- MP1584 Buck Converter Adjustable
-- MP2307 Buck Converter (MINI-360) is modern version of LM2596 buck convertor.
-> MP Series IC are made by Monolithic Power System (MPS) based in US.
-- XL4005 Buck Converter Adjustable (For Heavy Loads. More than 2 Ampere)
+LM1117 Famliy, LM317, LM2596, 78xx Series. In 1995 Texas Instruments released LM1117 IC. With General Characteristics as under
+- Low Dropout Regulator
+- 800 mA Output Current
+- 1.2 V Dropout Voltage
+- Input Voltage upto 15 V
+- Quienscent current (Iq) : 5mA / 5000uA
+- Dropout Voltage : 1.2 V, 1200 mV
 
-### Boost Converter
-- MT3608
-- XL6009 
-> XL Series ICs, buck or boost converters are by XLSemi ( Chinese Company).
-> 
+Various Companies made equivalent IC, such as
+- AMS1117 by Advanced Monolithic Systems
+- LD1117 by STMicroelectronics
+- NCP1117 by ON Semi
 
-### Buck Boost Converter
-- XL6019
+Cons
+- The Regulator stops working when VIN drops below VOUT + 1.2V. For 3.3 V VOUT we need minimum 3.3 V + 1.2 V = 4.5 V Minimum VIN. Hence not recommended for LiPo or Li-ion battery (max voltage is 4.2 V)
+- High Quiescent Current (5mA). Burns 5mA continously, even MCU is sleeping.
+- High Heat Disipation.
+- Output Noise - 200uVrms
+
+Pros
+- Excellent for USB Powered devices (5 V). 
+- Extreamly Cheap
+
+### 2 Gen (2000 - 2010) CMOS Revoltution
+XC6206, MCP1700, MP1584, MO2307 
+- Low Quienscent current (Iq) : 1uA
+- Dropout Voltage : 250mV
+- Output Current : 200 mA
+- Battery Range : 3.25 V to 6 V
+
+### 3 Gen (2010 - Present) Performance boost 
+AP2112K, RT9013, TPS7A0233, MAX38903. Enable Pin.
+- Quienscent current (Iq) : 55 uA
+- Dropout Voltage : 250mV
+- Output Current : 600 mA
+- Output Noise : 50 uVrms
+- Battery Range : 3.25 V to 6 V
 
 
-### Advanced
-- RT9080 Series LDO IC made by Richtek Technology Corportation is a Taiwan based company. 600 mA Power Output.
-- AP2112 Series LDO IC made by Diodes Incorporated is a US Company.
-- XC6222 series LDO IC made by Torex Semiconductor Ltd is a Japanese company.
+### Comparision Table for ESP32
+
+| LDO Model | Company | Output | Iq | Drop V | Examples | Remarks |
+| --- | --- | ---| --- | --- | --- |--- |
+| RT9080 | Richtek | 600 mA | 2 uA | 100 mV  | Sparkfun ESP32 C3, C6, S3 | Dual Rail |
+| MIC5528 | Microchip | 500 mA | 55 uA | 275 mV | Adafruit Feather ESP32-S3 | Widely Used  | 
+| AP2127K | Diodes Inc | 1 A | 55 uA | 280 mV | -  | High Current |
+| MAX38903 | Analog Devices | 300 mA | 5.5 uA | 140mV  | - | - |
+| TLV75533 | Texas Instruments | 500 mA | 19 uA | 305 mV | - | - |
+| XC6220B | Torex | 1 A | 80 uA | 250 mV | Xiao C3 | High Current |
+| RT9013 | Richtek | 500 mA | 20 uA | 240 mV |  - |Popular |
+| MIC5504 | Microchip | 300 mA | 38 uA | 90 mV | - | - |
+| ME6211 | Microne/ Nanjing | 300 mA | 40 uA | 100 mV | C3 Super Mini|Cheap |
+| XC6206P | Torex | 200 mA | 1 uA | 250 mV | - | Maximum Bty Life |
+| MCP1700 | Microchip | 250mA | 2 uA | 625 mV | - | - |
+
+> Chienese Dev kit maker like Espressif, seeedstudio, drobot, waveshare, etc uses chinese Voltage regulator like ME6211 (ESP32 C3 Super Mini), SGM2212 (ESP32 C3 Devkit C-02) etc.
 
 ## Transistor
 Transistor are like switches or amplifiers (if we pass small current or voltage, it will let large current flow through it.). There are mainly 2 types of transistor.
