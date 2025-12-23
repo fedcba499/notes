@@ -1,0 +1,12 @@
+- less than 200 lines : no file
+- kicad
+- autodesk fusion
+- 3mf files
+- battery : alkaline battery, coin cell battery
+- molicel A grade cells p42A vs P45B an other.
+- components - servo motor -tower pro
+- drone google drive notes image update
+- US-100 UART mode notes
+- LiDAR Notes
+- more images to notes.
+- 

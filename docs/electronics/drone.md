@@ -6,6 +6,8 @@
 - Pixhawk
 - iflight flight controllers
 
+- caux
+
 ## Firmware
 - Betaflight
 - INAV (Matak, F4, F7)
@@ -97,6 +99,7 @@ dont go after unibody frame, it is difficult to find (as there is so much wastag
 
 7 inch good for smooth moving
 
+
 ## Rotors
 > Rotor has 2 components, 1. Stator (static and fixed to arm), 2. Rotor (outer moving part). Configuration of rotor has 6015 stands for 60mm diameter of rotor and 15 mm height. magnets are in rotor. 
 
@@ -114,7 +117,7 @@ dont go after unibody frame, it is difficult to find (as there is so much wastag
 - EMAX ECO II Series - aimed at smaller and faster drones
 - VectorTechnics (Made in India Motor) - Generally Large Drones
 - 2212 920kv
-- 
+- TMotor High Quality
 
 
 
@@ -165,5 +168,39 @@ To assign any task to any pins (ie main pins 1-8 : RC 1-8 and auxiliary pins 1-6
 If you assigned RCIN8 to RC9 which means Radio controller in pin 8 assigned to Auckland pin 1.
 
 
+## 1 Kg Payload
+- Frame : Tarot - 650, 690 dependending on wheel base -SKU: 1578673
+- Flight Controller : caux v5+  - CUAV V5+ Flight Controller | Drone Autopilot PX4 APM
+- motor - Tarot 4114/320KV - SKU: 1357457, emax EMAX MT3515
+new tarot - SKU: 1318850
+- esc - ready to sky, emax - 60 A
+- 
+- 
+UAVCAN standard protocol neo 3 pro, uart serial protocol in neo 3
 
+| Category | Item | SKU | Price | Remarks |
+| --- | --- | --- | --- | --- |
+| Flight Controller | Cauv VX6 | 1590285 | 29,709| Latest Generation |
+| Flight Controller | Cauv X7+ | 1504857 | 28,926 | Upgrade to V5+ |
+| Flight Controller | Cauv V5+ |  1504856 | 35,119 | Old Model |
+| GPS | Cauv Neo 3 Pro |  1504855 | 16,969 | CAN Bus Protocol |
+| GPS | Cauv Neo 3 |  1504853 | 10,028 | UART / Serial Protocol |
+| GPS Mount | Tarot TL8x005 GPS Mount |  R111342 | 328 | - |
+| Frame | Tarot TL65B01 Iron Man 650 | 1578673 | 8,999 | - |
+| Motor | T-Motor Navigator MN4014 330KV | 1392063 | 8,499 | Below Anti gravity series Navigator |
+| Motor | Tarot 4114 320 KV | 1318850 | 4,641 | Good Quality |
+| Motor | Tarot 4008 330 KV | 1578669 | 3661 | Budget alternate to T Motor Navigator MN4014 330KV |
+| Motor | EMAX MT3515 650 KV | 29116 (CCW) / 29128 (CW) | 3,589 | 2 Types Motors, Repairability issue|
+| Propellers | Tarot TL100D04 15 inch | 1357456 | 1,133 | compatible with 15 inch |
+| Propellers | Tarot TL2829 1355 | R111171 | 827 | 13 inch |
+| Propellers | 1555 Carbon Fiber Propellers |  RKI-1492 | 864 | 1655, 1855 not suited with Tarot 650 Frame |
+| power Distribution board | 
+| ESC | T Motor Air 40A Esc | 1092910 | 3,459 | Budget T Motor ESC | PDB-XT60 with BEC 5V and 12V | 57854 | 289 | p |
+| ESC | Emax SimonK 60A | 29149 | 1,774 | - |
+| Camera | Skydroid C12 | R151313 | 50,751 | 3 axis gimbel |
+| Camera | Sydroid C10 | R150076 | 10,200 | 2 axis Base Camera |
+| Camera + Remote | Skydroid | RKI-7265 | 77,160 | C12 + H12 Pro |
+| Remote | Skydroid H12 | 1871159 | 28,562 | Inbuilt Android Screen |
+| Remote | Skydroid T12 | 1619564 | 16,551 | No Screen |
+| Battery | Ornage 10000 mAh 6S 25C | 1125089 | 13,388 | - |
 
